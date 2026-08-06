@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_squash_stresh",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_squash_stresh",
+  "parent":{
+    "name":"Efeitos",
+    "path":"folders/Efeitos.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

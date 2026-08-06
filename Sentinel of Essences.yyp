@@ -11,6 +11,7 @@
   "defaultScriptType":1,
   "Folders":[
     {"$GMFolder":"","%Name":"Animation Curves","folderPath":"folders/Animation Curves.yy","name":"Animation Curves","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Efeitos","folderPath":"folders/Efeitos.yy","name":"Efeitos","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Extensions","folderPath":"folders/Extensions.yy","name":"Extensions","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Fonts","folderPath":"folders/Fonts.yy","name":"Fonts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Notes","folderPath":"folders/Notes.yy","name":"Notes","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -59,8 +60,10 @@
   "resources":[
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_poder_essecia","path":"objects/obj_poder_essecia/obj_poder_essecia.yy",},},
+    {"id":{"name":"obj_screenshake","path":"objects/obj_screenshake/obj_screenshake.yy",},},
     {"id":{"name":"rm_level_1","path":"rooms/rm_level_1/rm_level_1.yy",},},
     {"id":{"name":"sc_globais","path":"scripts/sc_globais/sc_globais.yy",},},
+    {"id":{"name":"scr_squash_stresh","path":"scripts/scr_squash_stresh/scr_squash_stresh.yy",},},
     {"id":{"name":"spr_acido_sumindo","path":"sprites/spr_acido_sumindo/spr_acido_sumindo.yy",},},
     {"id":{"name":"spr_acido_surgindo","path":"sprites/spr_acido_surgindo/spr_acido_surgindo.yy",},},
     {"id":{"name":"spr_alavanca_baixo","path":"sprites/spr_alavanca_baixo/spr_alavanca_baixo.yy",},},

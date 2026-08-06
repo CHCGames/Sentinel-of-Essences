@@ -57,7 +57,13 @@ maquina_estados = function()
                 //Ele se destroi
                 instance_destroy(id, false);
             }    
+            
+            //Limitando a saida da tela //Ele se destroi
+            if(x >= 232 or x <= 24) instance_destroy(id, false);
+            if(y >= 122 or y <= 26) instance_destroy(id, false);
+            
         break;
     }
 }
+
 #endregion

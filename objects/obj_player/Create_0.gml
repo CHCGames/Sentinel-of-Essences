@@ -6,8 +6,17 @@ vel = 16;
 //Variável de estado
 estado = "baixo";
 
+//Variável de tempo do tiro
+tempo_tiro = FPS/1.5;
 
-//Pegando os controles
+//Variável de tempo de andar
+tempo_andar = 7;
+
+//Variável de delei do tiro
+delei_tiro = 0;
+
+//Variavel delei de andar
+delei_andar = 0;
 
 
 #endregion
@@ -17,24 +26,35 @@ estado = "baixo";
 //Método de movimento
 movimento = function()
 {
-    //Pegando os comandos
-    var _cima = keyboard_check_pressed(vk_up);
-    var _baixo = keyboard_check_pressed(vk_down);
-    var _direita = keyboard_check_pressed(vk_right);
-    var _esquerda = keyboard_check_pressed(vk_left);
     
-    //Caso ele aperte para direita //ele se move um espaço positivo na grade
-    if(_direita) x += vel;
-      
-    //Caso ele aperte para esquerda //ele se move um espaço negativo na grade 
-    if(_esquerda) x -= vel; 
-       
-    //Caso ele aperte para baixo //ele se move um espaço abaixo na grade
-    if(_baixo) y += vel; 
-       
-    //Caso ele aperte para cima //ele se move um espaço acima da grade
-    if(_cima) y -= vel; 
-      
+    //Caso o delei acabe
+    if (delei_andar <= 0) 
+    {
+    	//Pegando os comandos
+        var _cima = keyboard_check_pressed(vk_up);
+        var _baixo = keyboard_check_pressed(vk_down);
+        var _direita = keyboard_check_pressed(vk_right);
+        var _esquerda = keyboard_check_pressed(vk_left);
+        
+        //Caso ele aperte para direita //ele se move um espaço positivo na grade
+        if(_direita) x += vel; 
+          
+        //Caso ele aperte para esquerda //ele se move um espaço negativo na grade 
+        if(_esquerda) x -= vel; 
+           
+        //Caso ele aperte para baixo //ele se move um espaço abaixo na grade
+        if(_baixo) y += vel; 
+           
+        //Caso ele aperte para cima //ele se move um espaço acima da grade
+        if(_cima) y -= vel; 
+          
+        //Resetando o delei de andar
+        if(keyboard_check_pressed(vk_right)) delei_andar = tempo_andar;
+        if(keyboard_check_pressed(vk_left)) delei_andar = tempo_andar;
+        if(keyboard_check_pressed(vk_up)) delei_andar = tempo_andar;
+        if(keyboard_check_pressed(vk_down)) delei_andar = tempo_andar;
+    }
+    
     //Impedindo ele de sair da arena horizontalmente  
     x = clamp(x, 24, 232);
     
@@ -42,8 +62,22 @@ movimento = function()
     y = clamp(y, 26, 122);
 }
 
+//Método para mudar para animação de ataque
+animacao_ataque = function(_sprite_atq = noone, _sprite_inicial = noone)
+{
+    //Trocando de sprite
+    troca_sprite(_sprite_atq);
+    
+    //Caso acabar a animação
+    if (acabou_animacao()) 
+    {
+        //Ele troca sprite
+        troca_sprite(_sprite_inicial);
+    }
+}
+
 //Método de atacar
-ataque_lados = function(_direcao_h = 1, _direcao_v = 1, _vel_h = 2, _vel_v = 0, _layer = "Poderes",
+ataque_lados = function(_x = 0, _direcao_h = 1, _direcao_v = 1, _vel_h = 2, _vel_v = 0, _layer = "Poderes",
 _sprite_1 = spr_atq_essencia_surigindo_lado, _sprite_2 = spr_atq_essencia_noar_lados)
 {
     //Pegando o comando
@@ -53,7 +87,7 @@ _sprite_1 = spr_atq_essencia_surigindo_lado, _sprite_2 = spr_atq_essencia_noar_l
     if(_space)
     {
         //Criando ataque
-        var _poder = instance_create_layer(x, y - 5, _layer, obj_poder_essecia);
+        var _poder = instance_create_layer(x + _x, y - 4, _layer, obj_poder_essecia);
         
         //Defindo a spite
         _poder.sprite_index = _sprite_1;
@@ -72,19 +106,27 @@ _sprite_1 = spr_atq_essencia_surigindo_lado, _sprite_2 = spr_atq_essencia_noar_l
         
         //Dando a velocidade vertical
         _poder.vel_v = _vel_v;
+        
+        //resetando o delei do tiro
+        delei_tiro = tempo_tiro;
     }
 }
 
 //Máquina de estados
 maquina_estado = function()
 {
+    //Diminuindo delei do tiro
+    if(delei_tiro >= 0) delei_tiro--;  
+       
+    //Diminuindo o delei de andar
+    if(delei_andar >= 0) delei_andar--;
+    
     //Mudando o estado conforme a direção
     if(keyboard_check_pressed(vk_right)) estado = "direita";
     if(keyboard_check_pressed(vk_left)) estado = "esquerda";
     if(keyboard_check_pressed(vk_up)) estado = "cima";
     if(keyboard_check_pressed(vk_down)) estado = "baixo";
       
-    
     //Usando o Switch
     switch (estado) 
     {
@@ -94,9 +136,17 @@ maquina_estado = function()
             //Trcando de sprite
             troca_sprite(spr_player_parado_baixo);
             
-            //Usando a função de atacar 
-            ataque_lados(1, 1, 0, 2, , spr_atq_essencia_surigindo_baixo, spr_atq_essencia_noar_baixo);
-            
+            //Caso o delei aindo não tenha acabado
+            if (delei_tiro <= 0)
+            {
+                 //Usando a função de atacar 
+                 ataque_lados( ,1, 1, 0, 2, , spr_atq_essencia_surigindo_baixo, spr_atq_essencia_noar_baixo);
+                 
+                 //Caso ele aperte espaço //eele muda de estado
+                 if (keyboard_check_pressed(vk_space)) estado = "ataque_baixo";
+                   
+            }    
+              
         break;
 	
         //Caso ele estiver no estado cima
@@ -105,8 +155,16 @@ maquina_estado = function()
             //Trcando de sprite
             troca_sprite(spr_player_parado_cima);
             
-            //Usando a função de atacar 
-            ataque_lados(1, -1, 0, -2, "Poderes_cima", spr_atq_essencia_surigindo_baixo, spr_atq_essencia_noar_baixo);
+            //Caso o delei ainda não tenha acabado
+            if(delei_tiro <= 0) 
+            {
+               //Usando a função de atacar 
+               ataque_lados( ,1, -1, 0, -2, "Poderes_cima", spr_atq_essencia_surigindo_baixo, spr_atq_essencia_noar_baixo);
+               
+               //Caso ele aperte espaço //eele muda de estado
+               if (keyboard_check_pressed(vk_space)) estado = "ataque_cima";
+            }
+              
             
         break;
     
@@ -116,8 +174,15 @@ maquina_estado = function()
             //Trcando de sprite
             troca_sprite(spr_player_parado_direita);
             
-            //Usando a função de atacar para os lados
-            ataque_lados();
+            //Caso o delei do tiro acabe 
+            if(delei_tiro <= 0)
+            {
+                //Usando a função de atacar para os lados
+               ataque_lados(5);
+               
+               //Caso ele aperte espaço //eele muda de estado
+               if (keyboard_check_pressed(vk_space)) estado = "ataque_direita";
+            }
             
         break;
     
@@ -127,8 +192,72 @@ maquina_estado = function()
             //Trcando de sprite
             troca_sprite(spr_player_parado_esquerda);
             
-            //Usando a função de atacar para os lados
-            ataque_lados(-1, 1, -2, 0);
+            //caso o delei do tiro acabe
+            if(delei_tiro <= 0)
+            {
+               //Usando a função de atacar para os lados
+               ataque_lados(-5, -1, 1, -2, 0);
+               
+               //Caso ele aperte espaço //eele muda de estado
+               if (keyboard_check_pressed(vk_space)) estado = "ataque_esquerda"; 
+            }
+            
+        break;
+         
+        //Caso ele ataque para baixo
+        case "ataque_baixo":
+            
+            //Ele troca de sprite
+            troca_sprite(spr_player_atq_baixo);
+            
+            //Quando acabar a anaimação
+            if (acabou_animacao()) 
+            {
+            	//Ele volta para o estado baixo
+                estado = "baixo";
+            }
+        break;
+         
+        //Caso ele ataque para baixo
+        case "ataque_cima":
+           
+            //Ele troca de sprite
+            troca_sprite(spr_player_atq_cima);
+            
+            //Quando acabar a animção
+            if (acabou_animacao()) 
+            {
+            	//Ele volta para o estado cima
+                estado = "cima";
+            }
+        break;
+            
+        //Caso ele ataque para baixo
+        case "ataque_esquerda":
+              
+            //Ele troca de sprite
+            troca_sprite(spr_player_atq_esquerda);
+            
+            //Quando acabar a animção
+            if(acabou_animacao())
+            {
+                //Ele vai para o estado de esquerda
+                estado = "esquerda";
+            }
+        break;
+           
+        //Caso ele ataque para baixo
+        case "ataque_direita":
+              
+            //Ele troca de sprite
+            troca_sprite(spr_player_atq_direita);
+            
+            //Quando acabar a animação
+            if (acabou_animacao()) 
+            {
+            	//Ele vai para o estado de direita
+                estado = "direita";
+            }
         break;
     }
 }
