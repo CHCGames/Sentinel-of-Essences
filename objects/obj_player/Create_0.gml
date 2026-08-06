@@ -37,10 +37,10 @@ movimento = function()
         var _esquerda = keyboard_check_pressed(vk_left);
         
         //Caso ele aperte para direita //ele se move um espaço positivo na grade
-        if(_direita) x += vel; 
+        if(_direita == true and _cima == false and _baixo == false) x += vel; 
           
         //Caso ele aperte para esquerda //ele se move um espaço negativo na grade 
-        if(_esquerda) x -= vel; 
+        if(_esquerda == true and _cima == false and _baixo == false) x -= vel; 
            
         //Caso ele aperte para baixo //ele se move um espaço abaixo na grade
         if(_baixo) y += vel; 
