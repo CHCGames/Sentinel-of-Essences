@@ -4,4 +4,6 @@ movimento();
 //Aplicando a máquina de estados
 maquina_estado();
 
-show_debug_message(y);
+
+
+show_debug_message(estado);
