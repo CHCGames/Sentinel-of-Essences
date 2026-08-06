@@ -15,6 +15,7 @@
     {"$GMFolder":"","%Name":"Fonts","folderPath":"folders/Fonts.yy","name":"Fonts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Notes","folderPath":"folders/Notes.yy","name":"Notes","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Objects","folderPath":"folders/Objects.yy","name":"Objects","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Player","folderPath":"folders/Objects/Player.yy","name":"Player","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Particle Systems","folderPath":"folders/Particle Systems.yy","name":"Particle Systems","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Paths","folderPath":"folders/Paths.yy","name":"Paths","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Rooms","folderPath":"folders/Rooms.yy","name":"Rooms","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -55,7 +56,9 @@
   },
   "name":"Sentinel of Essences",
   "resources":[
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
+    {"id":{"name":"rm_level_1","path":"rooms/rm_level_1/rm_level_1.yy",},},
+    {"id":{"name":"sc_globais","path":"scripts/sc_globais/sc_globais.yy",},},
     {"id":{"name":"spr_acido_sumindo","path":"sprites/spr_acido_sumindo/spr_acido_sumindo.yy",},},
     {"id":{"name":"spr_acido_surgindo","path":"sprites/spr_acido_surgindo/spr_acido_surgindo.yy",},},
     {"id":{"name":"spr_alavanca_baixo","path":"sprites/spr_alavanca_baixo/spr_alavanca_baixo.yy",},},
@@ -169,11 +172,12 @@
     {"id":{"name":"spr_tronco_direita","path":"sprites/spr_tronco_direita/spr_tronco_direita.yy",},},
     {"id":{"name":"spr_tronco_esquerda","path":"sprites/spr_tronco_esquerda/spr_tronco_esquerda.yy",},},
     {"id":{"name":"spr_vida","path":"sprites/spr_vida/spr_vida.yy",},},
+    {"id":{"name":"tl_cenarios","path":"tilesets/tl_cenarios/tl_cenarios.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"rm_level_1","path":"rooms/rm_level_1/rm_level_1.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
