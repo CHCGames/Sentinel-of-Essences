@@ -64,6 +64,7 @@
   "resources":[
     {"id":{"name":"obj_arvore","path":"objects/obj_arvore/obj_arvore.yy",},},
     {"id":{"name":"obj_efeito_cresci","path":"objects/obj_efeito_cresci/obj_efeito_cresci.yy",},},
+    {"id":{"name":"obj_efeito_explosao","path":"objects/obj_efeito_explosao/obj_efeito_explosao.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_poder_essecia","path":"objects/obj_poder_essecia/obj_poder_essecia.yy",},},
     {"id":{"name":"obj_screenshake","path":"objects/obj_screenshake/obj_screenshake.yy",},},

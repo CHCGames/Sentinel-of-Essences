@@ -13,9 +13,19 @@ estado = "surgindo";
 //Variavel de distancia
 distancia = 48;
 
+//array de colisões
+colisoes = [obj_arvore]
+
 #endregion
 
 #region Métodos
+
+//Método de colisão
+colisao = function()
+{
+    //Caso ele colir com os objetos do array
+    if(instance_place(x, y, colisoes)) instance_destroy(id, false);
+}
 
 //Maquina de estados
 maquina_estados = function()
