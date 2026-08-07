@@ -28,7 +28,7 @@
   ],
   "name":"spr_explosao",
   "nineSlice":null,
-  "origin":4,
+  "origin":9,
   "parent":{
     "name":"Efeitos",
     "path":"folders/Sprites/Efeitos.yy",
@@ -96,7 +96,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":13,
-    "yorigin":11,
+    "yorigin":10,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

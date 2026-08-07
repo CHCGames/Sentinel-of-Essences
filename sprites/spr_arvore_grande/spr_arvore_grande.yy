@@ -3,7 +3,7 @@
   "%Name":"spr_arvore_grande",
   "bboxMode":2,
   "bbox_bottom":24,
-  "bbox_left":0,
+  "bbox_left":3,
   "bbox_right":13,
   "bbox_top":16,
   "collisionKind":1,

@@ -68,6 +68,8 @@
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_poder_essecia","path":"objects/obj_poder_essecia/obj_poder_essecia.yy",},},
     {"id":{"name":"obj_screenshake","path":"objects/obj_screenshake/obj_screenshake.yy",},},
+    {"id":{"name":"obj_tronco_lados","path":"objects/obj_tronco_lados/obj_tronco_lados.yy",},},
+    {"id":{"name":"obj_tronco_vertical","path":"objects/obj_tronco_vertical/obj_tronco_vertical.yy",},},
     {"id":{"name":"rm_level_1","path":"rooms/rm_level_1/rm_level_1.yy",},},
     {"id":{"name":"sc_globais","path":"scripts/sc_globais/sc_globais.yy",},},
     {"id":{"name":"scr_squash_stresh","path":"scripts/scr_squash_stresh/scr_squash_stresh.yy",},},

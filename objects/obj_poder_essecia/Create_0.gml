@@ -11,10 +11,10 @@ sprite_2 = spr_atq_essencia_noar_lados;
 estado = "surgindo";
 
 //Variavel de distancia
-distancia = 48;
+distancia = 28;
 
 //array de colisões
-colisoes = [obj_arvore]
+colisoes = [obj_arvore, obj_tronco_lados, obj_tronco_vertical]
 
 #endregion
 
@@ -24,7 +24,14 @@ colisoes = [obj_arvore]
 colisao = function()
 {
     //Caso ele colir com os objetos do array
-    if(instance_place(x, y, colisoes)) instance_destroy(id, false);
+    if(instance_place(x, y, colisoes))
+    {
+        //Criando efeito de explosão
+        instance_create_layer(x, y, "Efeitos", obj_efeito_explosao);
+        
+        //Ele se destroi
+        instance_destroy(id, false);
+    } 
 }
 
 //Maquina de estados
@@ -69,8 +76,8 @@ maquina_estados = function()
             }    
             
             //Limitando a saida da tela //Ele se destroi
-            if(x >= 232 or x <= 24) instance_destroy(id, false);
-            if(y >= 122 or y <= 26) instance_destroy(id, false);
+            if(x >= 242 or x <= 14) instance_destroy(id, false);
+            if(y >= 132 or y <= 16) instance_destroy(id, false);
             
         break;
     }

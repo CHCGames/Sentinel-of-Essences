@@ -18,17 +18,21 @@ delei_tiro = 0;
 //Variavel delei de andar
 delei_andar = 0;
 
+//array de colisão
+colisoes = [obj_arvore, obj_tronco_lados, obj_tronco_vertical];
+
 
 #endregion
 
 #region Métodos
+
 
 //Método de movimento
 movimento = function()
 {
     
     //Caso o delei acabe
-    if (delei_andar <= 0) 
+    if (delei_andar <= 0 ) 
     {
     	//Pegando os comandos
         var _cima = keyboard_check_pressed(vk_up);
@@ -37,16 +41,18 @@ movimento = function()
         var _esquerda = keyboard_check_pressed(vk_left);
         
         //Caso ele aperte para direita //ele se move um espaço positivo na grade
-        if(_direita == true and _cima == false and _baixo == false) x += vel; 
+        if(_direita == true and _cima == false and _baixo == false and 
+            !place_meeting(x + 16, y, colisoes)) x += vel; 
           
         //Caso ele aperte para esquerda //ele se move um espaço negativo na grade 
-        if(_esquerda == true and _cima == false and _baixo == false) x -= vel; 
+        if(_esquerda == true and _cima == false and _baixo == false and
+            !place_meeting(x - 16, y, colisoes)) x -= vel; 
            
         //Caso ele aperte para baixo //ele se move um espaço abaixo na grade
-        if(_baixo) y += vel; 
+        if(_baixo and !place_meeting(x, y + 16, colisoes)) y += vel; 
            
         //Caso ele aperte para cima //ele se move um espaço acima da grade
-        if(_cima) y -= vel; 
+        if(_cima and !place_meeting(x, y - 16, colisoes)) y -= vel; 
           
         //Resetando o delei de andar
         if(keyboard_check_pressed(vk_right)) delei_andar = tempo_andar;

@@ -9,6 +9,9 @@ tempo_crescer = FPS*3;
 //variável de Cresimento
 crescimento = tempo_crescer;
 
+//Criando array de colisões
+colisoes = [obj_poder_essecia, obj_tronco_lados, obj_tronco_vertical];
+
 #endregion
 
 #region Métodos
@@ -68,28 +71,28 @@ maquina_estados = function()
             troca_sprite(spr_arvore_grande);
             
             //Caso o poder colidir na esquerda da arvore
-            if(place_meeting(x - 1, y, obj_poder_essecia))
+            if(place_meeting(x - 2, y, colisoes))
             {
                 //Então ela vai para o estado de cair para direita
                 estado = "caindo_direita";
             }    
               
             //Caso o poder colidir na direita
-            if(place_meeting(x + 1, y, obj_poder_essecia))
+            if(place_meeting(x + 2, y, colisoes))
             {
                 //Ela vai para o estado de cair para esquerda
                 estado = "caindo_esquerda";
             } 
              
             //Caso o poder colidir em baixo
-            if(place_meeting(x, y + 5 , obj_poder_essecia))
+            if(place_meeting(x, y + 2 , colisoes))
             {
                 //Ela vai para o estado de cair para cima
                 estado = "caindo_cima";
             }    
               
             //Caso o poder colidir em cima
-            if(place_meeting(x, y - 5, obj_poder_essecia))
+            if(place_meeting(x, y - 2, colisoes))
             {
                 //Ela vai para o estado de cair para baixo
                 estado = "caindo_baixo";
