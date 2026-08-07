@@ -10,10 +10,10 @@ vel = 1;
 image_speed = 0;
 
 //array de colisao
-colisoes = [obj_arvore, obj_tronco_vertical, obj_tronco_lados, obj_caixa];
+colisoes = [obj_arvore, obj_tronco_vertical, obj_tronco_lados];
 
 //array de colsisoes que afetam
-colisoes_afetam = [obj_poder_essecia, obj_pedra, obj_caixa];
+colisoes_afetam = [obj_poder_essecia, obj_pedra, obj_tronco_lados];
 
 #endregion
 

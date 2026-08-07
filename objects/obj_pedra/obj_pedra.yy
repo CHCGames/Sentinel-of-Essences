@@ -36,8 +36,8 @@
     "path":"sprites/spr_pedra/spr_pedra.yy",
   },
   "spriteMaskId":{
-    "name":"spr_arvore_grande",
-    "path":"sprites/spr_arvore_grande/spr_arvore_grande.yy",
+    "name":"spr_pedra",
+    "path":"sprites/spr_pedra/spr_pedra.yy",
   },
   "visible":true,
 }

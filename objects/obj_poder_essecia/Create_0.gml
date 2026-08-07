@@ -14,7 +14,7 @@ estado = "surgindo";
 distancia = 42;
 
 //array de colisões
-colisoes = [obj_arvore, obj_tronco_lados, obj_tronco_vertical]
+colisoes = [obj_arvore, obj_tronco_lados, obj_tronco_vertical, obj_pedra]
 
 #endregion
 

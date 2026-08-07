@@ -19,8 +19,7 @@ delei_tiro = 0;
 delei_andar = 0;
 
 //array de colisão
-colisoes = [obj_arvore, obj_tronco_lados, obj_tronco_vertical, obj_buraco, obj_pedra,
-obj_caixa];
+colisoes = [obj_arvore, obj_tronco_lados, obj_tronco_vertical, obj_buraco, obj_pedra];
 
 
 #endregion
