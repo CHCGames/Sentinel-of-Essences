@@ -1,0 +1,2 @@
+//Deixando tudo aleatorio
+randomise();

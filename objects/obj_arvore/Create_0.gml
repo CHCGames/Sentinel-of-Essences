@@ -13,11 +13,26 @@ tempo_crescer = FPS * 3 + varia_tempo;
 crescimento = tempo_crescer;
 
 //Criando array de colisões
-colisoes = [obj_poder_essecia, obj_tronco_lados, obj_tronco_vertical];
+colisoes = [obj_poder_essecia, obj_tronco_lados, obj_tronco_vertical, obj_pedra];
 
 #endregion
 
 #region Métodos
+
+//Método de gerar troncos
+gera_troncos = function(_px = 0, _py = 0)
+{
+    //Caso ele tenha o purk
+    if (global.gerar_troncos) 
+    {
+    	//Varíavel de troncos aleatórios
+        var _tronco = choose(obj_tronco_lados, obj_tronco_vertical);
+        
+        //Criando os troncos
+        instance_create_layer(x, y - 2, "Troncos", _tronco);
+        instance_create_layer(x + _px, y - 2 + _py, "Troncos", _tronco);
+    }
+}
 
 //Máquina de estados
 maquina_estados = function()
@@ -123,6 +138,9 @@ maquina_estados = function()
                 instance_create_layer(x, y - 5, "Efeitos", obj_efeito_explosao);
                 instance_create_layer(x + 16, y - 5, "Efeitos", obj_efeito_explosao);
                 
+                //Criando tronco
+                gera_troncos(16);
+                
                 instance_destroy(id, false);
             }
             
@@ -145,6 +163,9 @@ maquina_estados = function()
                 instance_create_layer(x, y - 5, "Efeitos", obj_efeito_explosao);
                 instance_create_layer(x - 16, y - 5, "Efeitos", obj_efeito_explosao);
                 
+                //Criando tronco
+                gera_troncos(-16);
+                
                 instance_destroy(id, false);
             }
             
@@ -166,6 +187,9 @@ maquina_estados = function()
                 instance_create_layer(x, y - 5, "Efeitos", obj_efeito_explosao);
                 instance_create_layer(x, y - 16, "Efeitos", obj_efeito_explosao);
                 
+                //Criando tronco
+                gera_troncos(0, -16);
+                
                 instance_destroy(id, false);
             }
             
@@ -186,6 +210,9 @@ maquina_estados = function()
             	//Cria efeitos de explosão
                 instance_create_layer(x, y - 5, "Efeitos", obj_efeito_explosao);
                 instance_create_layer(x, y + 16, "Efeitos", obj_efeito_explosao);
+                
+                //Criando tronco
+                gera_troncos(0, 16);
                 
                 instance_destroy(id, false);
             }

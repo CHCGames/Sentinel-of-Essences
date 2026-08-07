@@ -20,6 +20,7 @@
     {"$GMFolder":"","%Name":"Efeitos","folderPath":"folders/Objects/Efeitos.yy","name":"Efeitos","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Objetos","folderPath":"folders/Objects/Objetos.yy","name":"Objetos","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Floresta","folderPath":"folders/Objects/Objetos/Floresta.yy","name":"Floresta","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Bliblioteca","folderPath":"folders/Objects/Objetos/Bliblioteca.yy","name":"Bliblioteca","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Player","folderPath":"folders/Objects/Player.yy","name":"Player","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Particle Systems","folderPath":"folders/Particle Systems.yy","name":"Particle Systems","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Paths","folderPath":"folders/Paths.yy","name":"Paths","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -65,6 +66,7 @@
   "resources":[
     {"id":{"name":"obj_arvore","path":"objects/obj_arvore/obj_arvore.yy",},},
     {"id":{"name":"obj_buraco","path":"objects/obj_buraco/obj_buraco.yy",},},
+    {"id":{"name":"obj_caixa","path":"objects/obj_caixa/obj_caixa.yy",},},
     {"id":{"name":"obj_dano","path":"objects/obj_dano/obj_dano.yy",},},
     {"id":{"name":"obj_efeito_cresci","path":"objects/obj_efeito_cresci/obj_efeito_cresci.yy",},},
     {"id":{"name":"obj_efeito_explosao","path":"objects/obj_efeito_explosao/obj_efeito_explosao.yy",},},

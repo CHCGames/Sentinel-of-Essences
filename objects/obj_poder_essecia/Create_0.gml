@@ -11,7 +11,7 @@ sprite_2 = spr_atq_essencia_noar_lados;
 estado = "surgindo";
 
 //Variavel de distancia
-distancia = 28;
+distancia = 42;
 
 //array de colisões
 colisoes = [obj_arvore, obj_tronco_lados, obj_tronco_vertical]

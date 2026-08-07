@@ -1,3 +1,11 @@
+#region Varíaveis globais
+
+//Variável de desbloqueio de poder arvores agora geram troncos
+global.gerar_troncos = false;
+
+#endregion
+
+
 #region Funções
 
 //Função para checar se acabou animação

@@ -10,7 +10,7 @@ vel = 2;
 image_speed = 0;
 
 //Criando array de colisões
-colisoes = [obj_poder_essecia, obj_tronco_lados, obj_tronco_vertical, obj_arvore, obj_pedra];
+colisoes = [obj_poder_essecia, obj_tronco_lados, obj_tronco_vertical, obj_arvore, obj_pedra, obj_caixa];
 
 #endregion
 

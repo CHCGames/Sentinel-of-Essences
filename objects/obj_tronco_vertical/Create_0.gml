@@ -10,7 +10,10 @@ vel = 1;
 image_speed = 0;
 
 //array de colisao
-colisoes = [obj_arvore, obj_tronco_lados, obj_tronco_vertical];
+colisoes = [obj_arvore, obj_tronco_lados, obj_tronco_vertical, obj_caixa];
+
+//array de colsisoes que afetam
+colisoes_afetam = [obj_poder_essecia, obj_pedra, obj_caixa];
 
 #endregion
 
@@ -26,14 +29,14 @@ maquina_estados = function()
         case "parado":
             
             //Caso o poder colidir na esquerda da arvore
-            if(instance_place(x, y - 2, obj_poder_essecia))
+            if(instance_place(x, y - 2, colisoes_afetam))
             {
                 //Então ela vai para o estado de cair para direita
                 estado = "caindo_direita";
             }    
               
             //Caso o poder colidir na direita
-            if(place_meeting(x, y + 2, obj_poder_essecia))
+            if(place_meeting(x, y + 2, colisoes_afetam))
             {
                 //Ela vai para o estado de cair para esquerda
                 estado = "caindo_esquerda";
