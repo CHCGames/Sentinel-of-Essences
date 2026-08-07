@@ -1,17 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_tronco_vertical",
+  "%Name":"obj_dano",
   "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_tronco_vertical",
+  "name":"obj_dano",
   "overriddenProperties":[],
   "parent":{
-    "name":"Floresta",
-    "path":"folders/Objects/Objetos/Floresta.yy",
+    "name":"Objetos",
+    "path":"folders/Objects/Objetos.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -32,12 +32,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_tronco_baixo",
-    "path":"sprites/spr_tronco_baixo/spr_tronco_baixo.yy",
+    "name":"spr_obj_dano",
+    "path":"sprites/spr_obj_dano/spr_obj_dano.yy",
   },
-  "spriteMaskId":{
-    "name":"spr_tronco_baixo",
-    "path":"sprites/spr_tronco_baixo/spr_tronco_baixo.yy",
-  },
+  "spriteMaskId":null,
   "visible":true,
 }

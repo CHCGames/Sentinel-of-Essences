@@ -1,16 +1,8 @@
 #region Variáveis
 
 //Variável de estado
-estado = "pequena";
+estado = "parada";
 
-//Variavel de variação de tempo
-varia_tempo = FPS * irandom_range(1, 2);
-
-//Variavel de tempo de Crescimento
-tempo_crescer = FPS * 3 + varia_tempo;
-
-//variável de Cresimento
-crescimento = tempo_crescer;
 
 //Criando array de colisões
 colisoes = [obj_poder_essecia, obj_tronco_lados, obj_tronco_vertical];
@@ -25,50 +17,8 @@ maquina_estados = function()
     //Usando o Switch
     switch (estado) 
     {
-    	//Caso ela esteja no estado pequena
-        case "pequena":
-             
-            //Diminuo o tempo de crescimento
-            crescimento--;
-            
-            //caso o tempo de acabe
-            if(crescimento <= 0)
-            {
-                //Criando efeito de crecsimento
-                instance_create_layer(x, y -8, "Efeitos", obj_efeito_cresci);
-                
-                //Reseta o tempo de Crescimento
-                crescimento = tempo_crescer;
-                
-                //Ele vai para o proximo estado
-                estado = "media";
-            }
-            
-        break;
-    
-    	//Caso ela esteja no estado media
-        case "media":
-            
-            //Ela troca de sprite
-            troca_sprite(spr_arvore_media);
-             
-            //Diminuo o tempo de crescimento
-            crescimento--;
-            
-            //caso o tempo de acabe
-            if(crescimento <= 0)
-            {
-                //Criando efeito de crecsimento
-                instance_create_layer(x, y -18, "Efeitos", obj_efeito_cresci);
-                
-                //Ele vai para o proximo estado
-                estado = "grande";
-            }
-            
-        break;
-    
         //Caso ela esteja no estado grande
-        case "grande":
+        case "parada":
              
             //Caso ele tomar dano
             if(instance_place(x, y, obj_dano)) estado = choose("caindo_direita", "caindo_esquerda",

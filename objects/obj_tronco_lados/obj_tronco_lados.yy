@@ -10,8 +10,8 @@
   "name":"obj_tronco_lados",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objects/Objetos.yy",
+    "name":"Floresta",
+    "path":"folders/Objects/Objetos/Floresta.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -35,6 +35,9 @@
     "name":"spr_tronco_direita",
     "path":"sprites/spr_tronco_direita/spr_tronco_direita.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_tronco_direita",
+    "path":"sprites/spr_tronco_direita/spr_tronco_direita.yy",
+  },
   "visible":true,
 }

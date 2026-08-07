@@ -24,7 +24,7 @@ colisoes = [obj_arvore, obj_tronco_lados, obj_tronco_vertical]
 colisao = function()
 {
     //Caso ele colir com os objetos do array
-    if(instance_place(x, y, colisoes))
+    if(place_meeting(x, y, colisoes))
     {
         //Criando efeito de explosão
         instance_create_layer(x, y, "Efeitos", obj_efeito_explosao);

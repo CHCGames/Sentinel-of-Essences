@@ -1,13 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_tronco_vertical",
+  "%Name":"obj_pedra",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_tronco_vertical",
+  "name":"obj_pedra",
   "overriddenProperties":[],
   "parent":{
     "name":"Floresta",
@@ -32,12 +31,12 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_tronco_baixo",
-    "path":"sprites/spr_tronco_baixo/spr_tronco_baixo.yy",
+    "name":"spr_pedra",
+    "path":"sprites/spr_pedra/spr_pedra.yy",
   },
   "spriteMaskId":{
-    "name":"spr_tronco_baixo",
-    "path":"sprites/spr_tronco_baixo/spr_tronco_baixo.yy",
+    "name":"spr_arvore_grande",
+    "path":"sprites/spr_arvore_grande/spr_arvore_grande.yy",
   },
   "visible":true,
 }

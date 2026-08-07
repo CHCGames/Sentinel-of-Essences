@@ -34,6 +34,9 @@
     "name":"spr_player_parado_baixo",
     "path":"sprites/spr_player_parado_baixo/spr_player_parado_baixo.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_player_parado_baixo",
+    "path":"sprites/spr_player_parado_baixo/spr_player_parado_baixo.yy",
+  },
   "visible":true,
 }

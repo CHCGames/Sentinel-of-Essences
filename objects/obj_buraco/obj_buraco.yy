@@ -1,12 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_arvore",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_buraco",
+  "eventList":[],
   "managed":true,
-  "name":"obj_arvore",
+  "name":"obj_buraco",
   "overriddenProperties":[],
   "parent":{
     "name":"Floresta",
@@ -31,12 +28,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_arvore_pequena",
-    "path":"sprites/spr_arvore_pequena/spr_arvore_pequena.yy",
+    "name":"spr_buraco",
+    "path":"sprites/spr_buraco/spr_buraco.yy",
   },
-  "spriteMaskId":{
-    "name":"spr_arvore_grande",
-    "path":"sprites/spr_arvore_grande/spr_arvore_grande.yy",
-  },
+  "spriteMaskId":null,
   "visible":true,
 }
