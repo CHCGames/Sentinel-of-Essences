@@ -15,7 +15,7 @@ distancia = 42;
 
 //array de colisões
 colisoes = [obj_arvore, obj_tronco_lados, obj_tronco_vertical, obj_pedra, obj_mago_tapete, 
-obj_caixa]
+obj_caixa, obj_parede];
 
 #endregion
 

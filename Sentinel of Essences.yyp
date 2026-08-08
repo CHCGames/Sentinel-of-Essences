@@ -58,6 +58,7 @@
   "ForcedPrefabProjectReferences":[
     {"link":"io.gamemaker.gm_filter_heathaze-1.0.0","name":"io.gamemaker.gm_filter_heathaze-1.0.0","path":"io.gamemaker.gm_filter_heathaze-1.0.0.yyp",},
     {"link":"io.gamemaker.gm_filter_ripples-1.0.0","name":"io.gamemaker.gm_filter_ripples-1.0.0","path":"io.gamemaker.gm_filter_ripples-1.0.0.yyp",},
+    {"link":"io.gamemaker.sdfshaders-1.0.0","name":"io.gamemaker.sdfshaders-1.0.0","path":"io.gamemaker.sdfshaders-1.0.0.yyp",},
   ],
   "IncludedFiles":[],
   "isEcma":false,
@@ -67,7 +68,9 @@
   },
   "name":"Sentinel of Essences",
   "resources":[
+    {"id":{"name":"ft_texto","path":"fonts/ft_texto/ft_texto.yy",},},
     {"id":{"name":"obj_arvore","path":"objects/obj_arvore/obj_arvore.yy",},},
+    {"id":{"name":"obj_botao_melhoria","path":"objects/obj_botao_melhoria/obj_botao_melhoria.yy",},},
     {"id":{"name":"obj_botao_voltar","path":"objects/obj_botao_voltar/obj_botao_voltar.yy",},},
     {"id":{"name":"obj_botao","path":"objects/obj_botao/obj_botao.yy",},},
     {"id":{"name":"obj_buraco","path":"objects/obj_buraco/obj_buraco.yy",},},
@@ -82,6 +85,7 @@
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_poder_essecia","path":"objects/obj_poder_essecia/obj_poder_essecia.yy",},},
     {"id":{"name":"obj_screenshake","path":"objects/obj_screenshake/obj_screenshake.yy",},},
+    {"id":{"name":"obj_texto","path":"objects/obj_texto/obj_texto.yy",},},
     {"id":{"name":"obj_tronco_lados","path":"objects/obj_tronco_lados/obj_tronco_lados.yy",},},
     {"id":{"name":"obj_tronco_vertical","path":"objects/obj_tronco_vertical/obj_tronco_vertical.yy",},},
     {"id":{"name":"rm_level_1","path":"rooms/rm_level_1/rm_level_1.yy",},},
