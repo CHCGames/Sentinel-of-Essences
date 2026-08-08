@@ -34,7 +34,25 @@ colisoes = [obj_dano, obj_tronco_lados, obj_tronco_vertical, obj_pedra, obj_caix
 colisao = function()
 {
     //Se ele colidir com qualquer item do array
-    if(instance_place(x, y, colisoes))
+    if(instance_place(x, y + 1, colisoes))
+    {
+        //Ele se destroi
+        instance_destroy(id, true);
+    }
+    //Se ele colidir com qualquer item do array
+    if(instance_place(x, y - 1, colisoes))
+    {
+        //Ele se destroi
+        instance_destroy(id, true);
+    }
+    //Se ele colidir com qualquer item do array
+    if(instance_place(x - 1, y, colisoes))
+    {
+        //Ele se destroi
+        instance_destroy(id, true);
+    }
+    //Se ele colidir com qualquer item do array
+    if(instance_place(x + 1, y, colisoes))
     {
         //Ele se destroi
         instance_destroy(id, true);

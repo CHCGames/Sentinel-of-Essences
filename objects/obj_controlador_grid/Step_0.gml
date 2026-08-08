@@ -7,3 +7,4 @@ if(global.precisa_atualizar_grid)
     //Reseto a variavel de controle
     global.precisa_atualizar_grid = false;
 }
+

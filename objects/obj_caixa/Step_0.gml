@@ -10,7 +10,7 @@ if(destruir)
 
 //Caso colidir com a parede se destroi
 if(instance_place(x, y, obj_parede)) instance_destroy(id, true);
-
+    
 //Limitando a saida da tela //Ele se destroi
 if(x >= 242 or x <= 14) instance_destroy(id, true);
 if(y >= 132 or y <= 16) instance_destroy(id, true);

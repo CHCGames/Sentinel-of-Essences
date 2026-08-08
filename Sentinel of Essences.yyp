@@ -81,6 +81,7 @@
     {"id":{"name":"obj_tronco_lados","path":"objects/obj_tronco_lados/obj_tronco_lados.yy",},},
     {"id":{"name":"obj_tronco_vertical","path":"objects/obj_tronco_vertical/obj_tronco_vertical.yy",},},
     {"id":{"name":"rm_level_1","path":"rooms/rm_level_1/rm_level_1.yy",},},
+    {"id":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"id":{"name":"sc_globais","path":"scripts/sc_globais/sc_globais.yy",},},
     {"id":{"name":"scr_squash_stresh","path":"scripts/scr_squash_stresh/scr_squash_stresh.yy",},},
     {"id":{"name":"spr_acido_sumindo","path":"sprites/spr_acido_sumindo/spr_acido_sumindo.yy",},},
@@ -208,6 +209,7 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"rm_level_1","path":"rooms/rm_level_1/rm_level_1.yy",},},
+    {"roomId":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

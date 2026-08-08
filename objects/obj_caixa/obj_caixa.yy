@@ -37,8 +37,8 @@
     "path":"sprites/spr_caixa/spr_caixa.yy",
   },
   "spriteMaskId":{
-    "name":"spr_caixa",
-    "path":"sprites/spr_caixa/spr_caixa.yy",
+    "name":"spr_pedra",
+    "path":"sprites/spr_pedra/spr_pedra.yy",
   },
   "visible":true,
 }
