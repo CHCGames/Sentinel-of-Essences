@@ -7,5 +7,4 @@ mp_grid_add_instances(global.grid, obj_tronco_lados, false);
 mp_grid_add_instances(global.grid, obj_tronco_vertical, false);
 mp_grid_add_instances(global.grid, obj_pedra, false);
 mp_grid_add_instances(global.grid, obj_parede, false);
-
-
+mp_grid_add_instances(global.grid, obj_caixa, false);

@@ -13,7 +13,7 @@ tempo_crescer = FPS * 3 + varia_tempo;
 crescimento = tempo_crescer;
 
 //Criando array de colisões
-colisoes = [obj_poder_essecia, obj_tronco_lados, obj_tronco_vertical, obj_pedra];
+colisoes = [obj_poder_essecia, obj_tronco_lados, obj_tronco_vertical, obj_pedra, obj_caixa];
 
 #endregion
 

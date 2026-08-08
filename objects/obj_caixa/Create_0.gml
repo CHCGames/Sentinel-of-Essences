@@ -4,7 +4,7 @@
 estado = "parada";
 
 //Variável de velocidade
-vel = 2;
+vel = 1.8;
 
 //Variavel de destruir
 destruir = false;
@@ -13,10 +13,10 @@ destruir = false;
 image_speed = 0;
 
 //Criando array de colisões
-colisoes = [obj_tronco_lados, obj_tronco_vertical, obj_arvore, obj_pedra, obj_mago_tapete, obj_caixa];
+colisoes = [obj_tronco_lados, obj_tronco_vertical, obj_arvore, obj_pedra, obj_mago_tapete];
 
 //array de colisões que afetam
-colisoes_afetam = [obj_poder_essecia, obj_tronco_lados, obj_tronco_vertical];
+colisoes_afetam = [obj_poder_essecia];
 
 #endregion
 
@@ -46,14 +46,14 @@ maquina_estados = function()
             } 
              
             //Caso o poder colidir em baixo
-            if(place_meeting(x, y + 2 , colisoes_afetam))
+            if(place_meeting(x, y + 4, colisoes_afetam))
             {
                 //Ela vai para o estado de cair para cima
                 estado = "caindo_cima";
             }    
               
             //Caso o poder colidir em cima
-            if(place_meeting(x, y - 2, colisoes_afetam))
+            if(place_meeting(x, y - 4, colisoes_afetam))
             {
                 //Ela vai para o estado de cair para baixo
                 estado = "caindo_baixo";
@@ -68,7 +68,7 @@ maquina_estados = function()
             hspeed = vel;
             
             //Quando acabou a animação
-            if (instance_place(x + 2, y, colisoes)) 
+            if (instance_place(x + 1, y, colisoes)) 
             {
                 //Ele se destroi
                 alarm[0] = 1;
@@ -83,7 +83,7 @@ maquina_estados = function()
             hspeed = -vel;
             
             //Quando acabou a animação
-            if (instance_place(x - 2, y, colisoes)) 
+            if (instance_place(x - 1, y, colisoes)) 
             {
                 //Ele se destroi
                 alarm[0] = 1;
@@ -99,7 +99,7 @@ maquina_estados = function()
             vspeed = -vel;
             
             //Quando acabou a animação
-            if (instance_place(x, y - 2, colisoes)) 
+            if (instance_place(x, y - 1, colisoes)) 
             {
                 //Ele se destroi
                 alarm[0] = 1;  
@@ -114,7 +114,7 @@ maquina_estados = function()
             vspeed = vel;
             
             //Quando acabou a animação
-            if (instance_place(x, y + 2, colisoes)) 
+            if (instance_place(x, y + 1, colisoes)) 
             {
                 //Ele se destroi
                 alarm[0] = 1;

@@ -3,10 +3,28 @@
 //Variável de desbloqueio de poder arvores agora geram troncos
 global.gerar_troncos = true;
 
+//Variavel de controle de atualização da grid
+global.precisa_atualizar_grid = false;
+
 
 #endregion
 
 #region Funções
+
+//Criando uma função para atualizar grid
+function atualizar_grid()
+{
+    //Limpando a gride atual
+    mp_grid_clear_all(global.grid);
+    
+    //Definindo quais objetos serão colididoss
+    mp_grid_add_instances(global.grid, obj_arvore, false);
+    mp_grid_add_instances(global.grid, obj_tronco_lados, false);
+    mp_grid_add_instances(global.grid, obj_tronco_vertical, false);
+    mp_grid_add_instances(global.grid, obj_pedra, false);
+    mp_grid_add_instances(global.grid, obj_parede, false);
+    mp_grid_add_instances(global.grid, obj_caixa, false);
+}
 
 //Função para checar se acabou animação
 function troca_sprite(_sprite)

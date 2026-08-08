@@ -1,17 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_arvore",
+  "%Name":"obj_caixa",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_arvore",
+  "name":"obj_caixa",
   "overriddenProperties":[],
   "parent":{
-    "name":"Floresta",
-    "path":"folders/Objects/Objetos/Floresta.yy",
+    "name":"Bliblioteca",
+    "path":"folders/Objects/Objetos/Bliblioteca.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -32,12 +33,12 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_arvore_pequena",
-    "path":"sprites/spr_arvore_pequena/spr_arvore_pequena.yy",
+    "name":"spr_caixa",
+    "path":"sprites/spr_caixa/spr_caixa.yy",
   },
   "spriteMaskId":{
-    "name":"spr_arvore_grande",
-    "path":"sprites/spr_arvore_grande/spr_arvore_grande.yy",
+    "name":"spr_caixa",
+    "path":"sprites/spr_caixa/spr_caixa.yy",
   },
   "visible":true,
 }

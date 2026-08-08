@@ -10,7 +10,9 @@ if(destruir)
 
 //Caso algo colidir com ele
 if(instance_place(x, y, obj_tronco_lados)) instance_destroy(id, true);
-if(instance_place(x, y, obj_tronco_vertical)) vspeed = 0;
+
+//Caso colidir com a parede se destroi
+if(instance_place(x, y, obj_parede)) instance_destroy(id, true);
 
 //Limitando a saida da tela //Ele se destroi
 if(y >= 126 or y <= 16) instance_destroy(id, true);

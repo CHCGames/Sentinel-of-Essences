@@ -67,6 +67,7 @@
   "resources":[
     {"id":{"name":"obj_arvore","path":"objects/obj_arvore/obj_arvore.yy",},},
     {"id":{"name":"obj_buraco","path":"objects/obj_buraco/obj_buraco.yy",},},
+    {"id":{"name":"obj_caixa","path":"objects/obj_caixa/obj_caixa.yy",},},
     {"id":{"name":"obj_controlador_grid","path":"objects/obj_controlador_grid/obj_controlador_grid.yy",},},
     {"id":{"name":"obj_dano","path":"objects/obj_dano/obj_dano.yy",},},
     {"id":{"name":"obj_efeito_cresci","path":"objects/obj_efeito_cresci/obj_efeito_cresci.yy",},},

@@ -23,7 +23,7 @@ tempo_andar = FPS * irandom_range(1, 2);
 delei_andar = tempo_andar;
 
 //Fazendo o array de colisoes
-colisoes = [obj_dano, obj_tronco_lados, obj_tronco_vertical, obj_pedra];
+colisoes = [obj_dano, obj_tronco_lados, obj_tronco_vertical, obj_pedra, obj_caixa];
 
 
 #endregion

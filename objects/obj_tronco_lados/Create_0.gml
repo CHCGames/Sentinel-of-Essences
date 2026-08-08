@@ -13,10 +13,10 @@ destruir = false;
 image_speed = 0;
 
 //array de colisao
-colisoes = [obj_arvore, obj_tronco_vertical, obj_mago_tapete];
+colisoes = [obj_arvore, obj_tronco_vertical, obj_mago_tapete, obj_caixa];
 
 //array de colsisoes que afetam
-colisoes_afetam = [obj_poder_essecia, obj_pedra, obj_tronco_lados];
+colisoes_afetam = [obj_poder_essecia, obj_pedra, obj_tronco_lados, obj_caixa];
 
 #endregion
 
@@ -60,7 +60,7 @@ maquina_estados = function()
             hspeed = vel;
             
             //Caso ele colidir com algo
-            if (instance_place(x + 5, y, colisoes)) 
+            if (instance_place(x + 15, y, colisoes)) 
             {
                 //Ele se destroi
                 alarm[0] = 2;
@@ -81,7 +81,7 @@ maquina_estados = function()
             hspeed = -vel;
             
             //Caso ele colidir com algo
-            if (instance_place(x - 5, y, colisoes)) 
+            if (instance_place(x - 15, y, colisoes)) 
             {
                 //Ele se destroi
                 alarm[0] = 2;

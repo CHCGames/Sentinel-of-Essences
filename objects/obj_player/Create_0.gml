@@ -31,13 +31,15 @@ delei_tiro = 0;
 delei_andar = 0;
 
 //array de colisão
-colisoes = [tl_colisoes, obj_arvore, obj_tronco_lados, obj_tronco_vertical, obj_buraco, obj_pedra, obj_mago_tapete];
+colisoes = [obj_parede, obj_arvore, obj_tronco_lados, obj_tronco_vertical, obj_buraco, obj_pedra, 
+obj_mago_tapete, obj_caixa];
 
 //Array inimigos
 array_inimigos = [obj_mago_tapete];
 
 //Array vazio
-array_vazio = [obj_arvore, obj_tronco_lados, obj_tronco_vertical, obj_buraco, obj_pedra, tl_colisoes];
+array_vazio = [obj_arvore, obj_tronco_lados, obj_tronco_vertical, obj_buraco, obj_pedra, obj_parede,
+obj_caixa];
 
 //Variável para salvar o array
 array_atual = colisoes;
@@ -49,6 +51,13 @@ array_atual = colisoes;
 //Método para tomar dano
 toma_dano = function()
 {
+    //Caso a vida dele acabe
+    if(vida <= 0)
+    {
+        //ele perde
+        room_restart();
+    }    
+    
     //Caso ele colidir com inimigo
     if(place_meeting(x, y, array_inimigos) and ivuneravel == false)
     {
