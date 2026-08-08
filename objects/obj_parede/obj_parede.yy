@@ -1,17 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_mago_tapete",
+  "%Name":"obj_parede",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_mago_tapete",
+  "name":"obj_parede",
   "overriddenProperties":[],
   "parent":{
-    "name":"Inimigos",
-    "path":"folders/Objects/Inimigos.yy",
+    "name":"Objetos",
+    "path":"folders/Objects/Objetos.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -32,12 +30,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_mago_tp_parado_baixo",
-    "path":"sprites/spr_mago_tp_parado_baixo/spr_mago_tp_parado_baixo.yy",
+    "name":"spr_obj_dano",
+    "path":"sprites/spr_obj_dano/spr_obj_dano.yy",
   },
-  "spriteMaskId":{
-    "name":"spr_mago_tp_parado_baixo",
-    "path":"sprites/spr_mago_tp_parado_baixo/spr_mago_tp_parado_baixo.yy",
-  },
+  "spriteMaskId":null,
   "visible":true,
 }

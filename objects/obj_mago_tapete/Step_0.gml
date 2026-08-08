@@ -1,5 +1,5 @@
-//Aplicando máquina de estados
-maquina_estado();
+//Aplicando o movimento
+movimento();
 
+show_debug_message(direction);
 
-show_debug_message(estado);

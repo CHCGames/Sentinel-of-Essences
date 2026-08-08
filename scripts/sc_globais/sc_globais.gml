@@ -3,6 +3,7 @@
 //Variável de desbloqueio de poder arvores agora geram troncos
 global.gerar_troncos = true;
 
+
 #endregion
 
 #region Funções
