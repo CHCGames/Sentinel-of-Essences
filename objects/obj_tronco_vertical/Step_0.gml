@@ -1,6 +1,17 @@
 //Aplicando a maquina de estados
 maquina_estados();
 
+//Caso ele possa se destruir
+if(destruir)
+{
+    //ele se destroi
+    instance_destroy(id, true);
+}
+
+//Caso algo colidir com ele
+if(instance_place(x, y, obj_tronco_lados)) instance_destroy(id, true);
+if(instance_place(x, y, obj_tronco_vertical)) vspeed = 0;
+
 //Limitando a saida da tela //Ele se destroi
 if(y >= 126 or y <= 16) instance_destroy(id, true);
 if(x >= 238 or x <= 14) instance_destroy(id, true);

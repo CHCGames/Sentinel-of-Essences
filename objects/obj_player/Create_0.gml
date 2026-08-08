@@ -1,7 +1,13 @@
 #region Variáveis
 
+//Variável de vida
+vida = 3;
+
 //Varíavel de movimento 
 vel = 16;
+
+//Variável de controle de ficar ivunerável
+ivuneravel = false;
 
 //Variável de estado
 estado = "baixo";
@@ -12,6 +18,12 @@ tempo_tiro = FPS/1.5;
 //Variável de tempo de andar
 tempo_andar = 7;
 
+//Variável de tempo do efeito de ivunerável
+tempo_efeito = FPS/4;
+
+//Variável de delei do efeito ivunerável
+delei_efeito = tempo_efeito;
+
 //Variável de delei do tiro
 delei_tiro = 0;
 
@@ -19,13 +31,75 @@ delei_tiro = 0;
 delei_andar = 0;
 
 //array de colisão
-colisoes = [obj_arvore, obj_tronco_lados, obj_tronco_vertical, obj_buraco, obj_pedra, obj_mago_tapete];
+colisoes = [tl_colisoes, obj_arvore, obj_tronco_lados, obj_tronco_vertical, obj_buraco, obj_pedra, obj_mago_tapete];
 
+//Array inimigos
+array_inimigos = [obj_mago_tapete];
+
+//Array vazio
+array_vazio = [obj_arvore, obj_tronco_lados, obj_tronco_vertical, obj_buraco, obj_pedra, tl_colisoes];
+
+//Variável para salvar o array
+array_atual = colisoes;
 
 #endregion
 
 #region Métodos
 
+//Método para tomar dano
+toma_dano = function()
+{
+    //Caso ele colidir com inimigo
+    if(place_meeting(x, y, array_inimigos) and ivuneravel == false)
+    {
+        //Diminuindo a vida
+        vida -= 1;
+        
+        //Avisando que estou ivunerável
+        ivuneravel = true;
+        
+        //Tremendo a tela
+        global.shake = 2;
+        
+        //Definindo o array
+        array_atual = array_vazio;
+        
+        //Disparando o alarme
+        alarm[0] = FPS * 5;
+        
+    }
+    
+    //Diminuindo o delei do efeito
+    delei_efeito--;
+    
+    //Fazendo o efeito de ivunerável
+    if(ivuneravel)
+    {
+        //mudando a cor
+        if(image_blend == c_white and delei_efeito <= 0)
+        {
+            //então ele muda de cor
+            image_blend = c_red;
+            
+            //Resetando delei
+            delei_efeito = tempo_efeito;
+        }
+        else if(image_blend == c_red and delei_efeito <= 0)
+        {
+            //Ele muda de cor
+            image_blend = c_white
+            
+            //Resetando delei
+            delei_efeito = tempo_efeito;
+        }    
+    }
+    else //Ao contraio
+    {
+        //ele volta a cor normal
+        image_blend = c_white;
+    }
+    
+}
 
 //Método de movimento
 movimento = function()
@@ -42,17 +116,17 @@ movimento = function()
         
         //Caso ele aperte para direita //ele se move um espaço positivo na grade
         if(_direita == true and _cima == false and _baixo == false and 
-            !place_meeting(x + 16, y, colisoes)) x += vel; 
+            !place_meeting(x + 16, y, array_atual)) x += vel; 
           
         //Caso ele aperte para esquerda //ele se move um espaço negativo na grade 
         if(_esquerda == true and _cima == false and _baixo == false and
-            !place_meeting(x - 16, y, colisoes)) x -= vel; 
+            !place_meeting(x - 16, y, array_atual)) x -= vel; 
            
         //Caso ele aperte para baixo //ele se move um espaço abaixo na grade
-        if(_baixo and !place_meeting(x, y + 16, colisoes)) y += vel; 
+        if(_baixo and !place_meeting(x, y + 16, array_atual)) y += vel; 
            
         //Caso ele aperte para cima //ele se move um espaço acima da grade
-        if(_cima and !place_meeting(x, y - 16, colisoes)) y -= vel; 
+        if(_cima and !place_meeting(x, y - 16, array_atual)) y -= vel; 
           
         //Resetando o delei de andar
         if(keyboard_check_pressed(vk_right)) delei_andar = tempo_andar;

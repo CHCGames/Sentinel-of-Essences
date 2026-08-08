@@ -6,11 +6,16 @@ estado = "parada";
 //Variável de velocidade
 vel = 1.8;
 
+
+
+//Variavel de destruir
+destruir = false;
+
 //Zerando a velocidade da animação
 image_speed = 0;
 
 //Criando array de colisões
-colisoes = [obj_tronco_lados, obj_tronco_vertical, obj_arvore, obj_pedra];
+colisoes = [obj_tronco_lados, obj_tronco_vertical, obj_arvore, obj_pedra, obj_mago_tapete];
 
 //array de colisões que afetam
 colisoes_afetam = [obj_poder_essecia, obj_tronco_lados, obj_tronco_vertical];
@@ -65,10 +70,10 @@ maquina_estados = function()
             hspeed = vel;
             
             //Quando acabou a animação
-            if (instance_place(x, y, colisoes)) 
+            if (instance_place(x + 2, y, colisoes) != noone) 
             {
-                 //Ele se destroi
-                instance_destroy(id, true);
+                //Ele se destroi
+                alarm[0] = 1;
             }
             
         break;
@@ -80,10 +85,10 @@ maquina_estados = function()
             hspeed = -vel;
             
             //Quando acabou a animação
-            if (instance_place(x, y, colisoes)) 
+            if (instance_place(x - 2, y, colisoes)) 
             {
-                 //Ele se destroi
-                instance_destroy(id, true);
+                //Ele se destroi
+                alarm[0] = 1;
             }
             
             
@@ -96,10 +101,10 @@ maquina_estados = function()
             vspeed = -vel;
             
             //Quando acabou a animação
-            if (instance_place(x, y, colisoes)) 
+            if (instance_place(x, y - 2, colisoes)) 
             {
-                 //Ele se destroi
-                instance_destroy(id, true);   
+                //Ele se destroi
+                alarm[0] = 1;  
             }
             
         break;
@@ -111,10 +116,10 @@ maquina_estados = function()
             vspeed = vel;
             
             //Quando acabou a animação
-            if (instance_place(x, y, colisoes)) 
+            if (instance_place(x, y + 2, colisoes)) 
             {
                 //Ele se destroi
-                instance_destroy(id, true);
+                alarm[0] = 1;
             }
             
         break;

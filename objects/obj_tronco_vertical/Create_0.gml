@@ -6,11 +6,14 @@ estado = "parado";
 //Variável de velocidade
 vel = 1;
 
+//Variavel de controle de se destruir
+destruir = false;
+
 //zerando a animação
 image_speed = 0;
 
 //array de colisao
-colisoes = [obj_arvore, obj_tronco_lados, obj_tronco_vertical];
+colisoes = [obj_arvore, obj_tronco_lados, obj_mago_tapete];
 
 //array de colsisoes que afetam
 colisoes_afetam = [obj_poder_essecia, obj_pedra, obj_tronco_vertical];
@@ -36,7 +39,7 @@ maquina_estados = function()
             }    
               
             //Caso o poder colidir na direita
-            if(place_meeting(x, y + 2, colisoes_afetam))
+            if(instance_place(x, y + 2, colisoes_afetam))
             {
                 //Ela vai para o estado de cair para esquerda
                 estado = "caindo_esquerda";
@@ -57,10 +60,10 @@ maquina_estados = function()
             vspeed = vel;
             
             //Caso ele colidir com algo
-            if (instance_place(x, y, colisoes)) 
+            if (instance_place(x, y + 2, colisoes)) 
             {
-            	//Ele se destroi
-                instance_destroy(id, false);
+                //Ele se destroi
+                alarm[0] = 2;
             }
             
         break;
@@ -78,10 +81,10 @@ maquina_estados = function()
             vspeed = -vel;
             
             //Caso ele colidir com algo
-            if (instance_place(x, y, colisoes)) 
+            if (instance_place(x, y - 2, colisoes)) 
             {
-            	//Ele se destroi
-                instance_destroy(id, true);
+                //Ele se destroi
+                alarm[0] = 2;
             }
             
         break;

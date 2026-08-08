@@ -30,7 +30,7 @@ gera_troncos = function(_px = 0, _py = 0)
         
         //Criando os troncos
         instance_create_layer(x, y - 2, "Troncos", _tronco);
-        instance_create_layer(x + _px, y - 2 + _py, "Troncos", _tronco);
+        
     }
 }
 
@@ -139,7 +139,7 @@ maquina_estados = function()
                 instance_create_layer(x + 16, y - 5, "Efeitos", obj_efeito_explosao);
                 
                 //Criando tronco
-                gera_troncos(16);
+                gera_troncos();
                 
                 instance_destroy(id, false);
             }

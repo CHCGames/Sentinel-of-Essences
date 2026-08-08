@@ -17,14 +17,29 @@ next_y = y;
 move = false;
 
 //Variável de tempo de andar
-tempo_andar = FPS * irandom_range(1, 3);
+tempo_andar = FPS * irandom_range(1, 2);
 
 //Variável de delei de andar
 delei_andar = tempo_andar;
 
+//Fazendo o array de colisoes
+colisoes = [obj_dano, obj_tronco_lados, obj_tronco_vertical, obj_pedra];
+
+
 #endregion
 
 #region Métodos
+
+//Fazendo Método de colisão
+colisao = function()
+{
+    //Se ele colidir com qualquer item do array
+    if(instance_place(x, y, colisoes))
+    {
+        //Ele se destroi
+        instance_destroy(id, true);
+    }
+}
 
 //Criando o método de movimento
 movimento = function()
@@ -33,7 +48,7 @@ movimento = function()
     var _distancia = point_distance(x, y, obj_player.x, obj_player.y)
     
     //Caso a distancia dele do player seja menor que 50
-    if(_distancia < 150)
+    if(_distancia < 250)
     {
           //Estou usando um path para ele seguir o player
           if(mp_grid_path(global.grid, meu_path, x, y, obj_player.x, obj_player.y, false))
@@ -69,14 +84,11 @@ movimento = function()
                         var _andar = true;
                            
                         //Fazendo ele não entrar no quadadrado do player
-                        if(_x == obj_player.x and _y == obj_player.y or _x == obj_mago_tapete.x and 
-                           _y == obj_mago_tapete.y or place_meeting(next_x, next_y, obj_mago_tapete))
+                        if(place_meeting(next_x, next_y, obj_mago_tapete))
                         {
                             //Falando que ele não pode andar
                             _andar = false;
                             
-                            //Ele não se move
-                            move = false;
                         }
                         else if(_andar) //Ao contrario
                         {
@@ -106,5 +118,6 @@ movimento = function()
           } 
     }
 }
+
 
 #endregion
