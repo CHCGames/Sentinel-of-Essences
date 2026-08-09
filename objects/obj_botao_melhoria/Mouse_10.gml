@@ -1,4 +1,4 @@
-if(global.arvores == false and global.dinheiro >= custo)
+if(atingi_nivel_max == false and global.dinheiro >= custo)
 {
     //Usando o efeito squash
     efeito_squash(2.1, 2.1);

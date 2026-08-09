@@ -1,6 +1,6 @@
 {
   "$GMObject":"",
-  "%Name":"obj_melhoria_crescimento",
+  "%Name":"obj_botao_melhoria",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
@@ -10,11 +10,11 @@
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_melhoria_crescimento",
+  "name":"obj_botao_melhoria",
   "overriddenProperties":[],
   "parent":{
-    "name":"Melhorias",
-    "path":"folders/Objects/Hud/Melhorias.yy",
+    "name":"Hud",
+    "path":"folders/Objects/Hud.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,7 +30,10 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[],
+  "properties":[
+    {"$GMObjectProperty":"v2","%Name":"melhoria","filters":[],"listItems":[],"multiselect":false,"name":"melhoria","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"aumento_distancia\"","varType":2,},
+    {"$GMObjectProperty":"v2","%Name":"meu_custo","filters":[],"listItems":[],"multiselect":false,"name":"meu_custo","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"100","varType":0,},
+  ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,

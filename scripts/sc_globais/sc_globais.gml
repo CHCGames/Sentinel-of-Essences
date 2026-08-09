@@ -13,7 +13,7 @@ global.cair_livros = false;
 global.cria_arvores = false;
 
 //Variável de velocidade de crescimento das arvores
-global.velocidade_crescimento = 4;
+global.velocidade_crescimento = 3;
 
 //Variável de vida do player
 global.vida_player = 3;
@@ -22,19 +22,7 @@ global.vida_player = 3;
 global.distancia_atq = 0;
 
 //Variável de dinheiro
-global.dinheiro = 150;
-
-//Variável de nivel max arvores
-global.arvores = false;
-
-///Variável de nivel da arvore
-global.nivel_av = 0;
-
-//Variável de poder
-global.poder = false;
-
-//Variavel do nivel
-global.nv_poder = 0;
+global.dinheiro = 100;
 
 //Variavel de controle de atualização da grid
 global.precisa_atualizar_grid = false;

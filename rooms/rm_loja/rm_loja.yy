@@ -7,9 +7,8 @@
   "inheritLayers":false,
   "instanceCreationOrder":[
     {"name":"inst_53EC22CB","path":"rooms/rm_loja/rm_loja.yy",},
+    {"name":"inst_6A8A8F8C","path":"rooms/rm_loja/rm_loja.yy",},
     {"name":"inst_43C2CD6","path":"rooms/rm_loja/rm_loja.yy",},
-    {"name":"inst_48B389EA","path":"rooms/rm_loja/rm_loja.yy",},
-    {"name":"inst_24FDAD9A","path":"rooms/rm_loja/rm_loja.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -17,9 +16,8 @@
         {"$GMRInstance":"v4","%Name":"inst_53EC22CB","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_53EC22CB","objectId":{"name":"obj_botao_voltar","path":"objects/obj_botao_voltar/obj_botao_voltar.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_botao_voltar","path":"objects/obj_botao_voltar/obj_botao_voltar.yy",},"propertyId":{"name":"destino_bt","path":"objects/obj_botao_voltar/obj_botao_voltar.yy",},"resource":{"name":"rm_turotial","path":"rooms/rm_turotial/rm_turotial.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"rm_turotial",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":18.0,"y":130.0,},
+        {"$GMRInstance":"v4","%Name":"inst_6A8A8F8C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6A8A8F8C","objectId":{"name":"obj_botao_melhoria","path":"objects/obj_botao_melhoria/obj_botao_melhoria.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":35.0,"y":34.0,},
         {"$GMRInstance":"v4","%Name":"inst_43C2CD6","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_43C2CD6","objectId":{"name":"obj_moldura_dineiro","path":"objects/obj_moldura_dineiro/obj_moldura_dineiro.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":237.0,"y":134.0,},
-        {"$GMRInstance":"v4","%Name":"inst_48B389EA","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_48B389EA","objectId":{"name":"obj_melhoria_crescimento","path":"objects/obj_melhoria_crescimento/obj_melhoria_crescimento.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":178.0,"y":36.0,},
-        {"$GMRInstance":"v4","%Name":"inst_24FDAD9A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_24FDAD9A","objectId":{"name":"obj_melhoria_poder","path":"objects/obj_melhoria_poder/obj_melhoria_poder.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":76.0,"y":36.0,},
       ],"layers":[],"name":"Botoes","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"Molduras","assets":[
         {"$GMRSpriteGraphic":"v1","%Name":"graphic_20070F25","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_20070F25","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.3515625,"scaleY":1.9375,"spriteId":{"name":"spr_icones_purks","path":"sprites/spr_icones_purks/spr_icones_purks.yy",},"x":121.5,"y":128.0,},
