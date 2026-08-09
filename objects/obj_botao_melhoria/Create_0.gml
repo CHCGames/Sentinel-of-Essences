@@ -78,11 +78,86 @@ maquina_estado = function()
             }  
              
         break;
+    
+        //Caso ele seja de aumentar disntancia
+        case "cresce_arvore":
+         
+            //Definindo a sprite pelo frame
+            image_index = 3;
+            
+            //Passando minha Função
+            funcao = "Arvores demoram menos tempo para crescerem totalmente."
+            
+            //Passando o meu nivel
+            meu_nivel = global.nivel_crescimento;
+            
+            //Caso o jogador clique na melhoria e o nivel do poder for menor que o max e se ele tem
+            //dinheiro suficiente
+            if(cliquei == true and global.nivel_crescimento < 3 and global.dinheiro >= custo)
+            {
+                //Avisando que já cliquei
+                cliquei = false;
+                
+                //Então ele melhora a distancia
+                global.velocidade_crescimento -= 1;
+                
+                //Diminuindo o dinheiro
+                global.dinheiro -= custo;
+                
+                //Aumentando o custo
+                custo *= 2;
+                
+                //Aumento o nivel em 1
+                global.nivel_crescimento += 1;
+            }
+            
+            //Caso eue atinja o nivel maximo
+            if(global.nivel_crescimento >= 3)
+            {
+                //Avisando que cheguei no nível maximo
+                atingi_nivel_max = true;
+            }  
+             
+        break;
+        
+        //Caso ele seja de aumentar disntancia
+        case "gera_troncos":
+         
+            //Definindo a sprite pelo frame
+            image_index = 1;
+            
+            //Passando minha Função
+            funcao = "Arvores agora geram troncos onde foram destruidas."
+            
+            //Passando o meu nivel
+            meu_nivel = global.nivel_troncos;
+            
+            //Caso o jogador clique na melhoria e o nivel do poder for menor que o max e se ele tem
+            //dinheiro suficiente
+            if(cliquei == true and global.nivel_troncos < 1 and global.dinheiro >= custo)
+            {
+                //Avisando que já cliquei
+                cliquei = false;
+                
+                //Então ele melhora a distancia
+                global.gerar_troncos = true;
+                
+                //Diminuindo o dinheiro
+                global.dinheiro -= custo;
+                
+                //Aumento o nivel em 1
+                global.nivel_troncos += 1;
+            }
+            
+            //Caso eue atinja o nivel maximo
+            if(global.nivel_troncos >= 1)
+            {
+                //Avisando que cheguei no nível maximo
+                atingi_nivel_max = true;
+            }  
+             
+        break;
     }
 }
 
 #endregion
-
-
-
-

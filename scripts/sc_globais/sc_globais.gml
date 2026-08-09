@@ -27,6 +27,11 @@ global.dinheiro = 100;
 //Variável de nível da distancia do poder
 global.nivel_poder = 0;
 
+//Varíavel de nível de velocidade de crescimento da arvore
+global.nivel_crescimento = 0;
+
+//Variável de nivel de criar troncos
+global.nivel_troncos = 0;
 
 //Variavel de controle de atualização da grid
 global.precisa_atualizar_grid = false;
