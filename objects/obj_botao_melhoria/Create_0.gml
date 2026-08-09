@@ -157,6 +157,163 @@ maquina_estado = function()
             }  
              
         break;
+    
+        //Caso ele seja de aumentar disntancia
+        case "cria_arvores":
+         
+            //Definindo a sprite pelo frame
+            image_index = 2;
+            
+            //Passando minha Função
+            funcao = "Gera arvores em lugares aléatorios em fases que não existem arvores naturalmente."
+            
+            //Passando o meu nivel
+            meu_nivel = global.nivel_cria_arvores;
+            
+            //Caso o jogador clique na melhoria e o nivel do poder for menor que o max e se ele tem
+            //dinheiro suficiente
+            if(cliquei == true and global.nivel_cria_arvores < 1 and global.dinheiro >= custo)
+            {
+                //Avisando que já cliquei
+                cliquei = false;
+                
+                //Então ele melhora a distancia
+                global.cria_arvores = true;
+                
+                //Diminuindo o dinheiro
+                global.dinheiro -= custo;
+                
+                //Aumento o nivel em 1
+                global.nivel_cria_arvores += 1;
+            }
+            
+            //Caso eue atinja o nivel maximo
+            if(global.nivel_cria_arvores >= 1)
+            {
+                //Avisando que cheguei no nível maximo
+                atingi_nivel_max = true;
+            }  
+             
+        break;
+    
+        //Caso ele seja de aumentar disntancia
+        case "vida":
+         
+            //Definindo a sprite pelo frame
+            image_index = 4;
+            
+            //Passando minha Função
+            funcao = "Aumenta sua vida para quatro corações."
+            
+            //Passando o meu nivel
+            meu_nivel = global.nivel_vida;
+            
+            //Caso o jogador clique na melhoria e o nivel do poder for menor que o max e se ele tem
+            //dinheiro suficiente
+            if(cliquei == true and global.nivel_vida < 1 and global.dinheiro >= custo)
+            {
+                //Avisando que já cliquei
+                cliquei = false;
+                
+                //Então ele melhora a distancia
+                global.vida_player += 1;
+                
+                //Diminuindo o dinheiro
+                global.dinheiro -= custo;
+                
+                //Aumento o nivel em 1
+                global.nivel_vida += 1;
+            }
+            
+            //Caso eue atinja o nivel maximo
+            if(global.nivel_vida >= 1)
+            {
+                //Avisando que cheguei no nível maximo
+                atingi_nivel_max = true;
+            }  
+             
+        break;
+    
+        //Caso ele seja de aumentar disntancia
+        case "livros":
+         
+            //Definindo a sprite pelo frame
+            image_index = 5;
+            
+            //Passando minha Função
+            funcao = "Gera livros gigantes que podem matar seus inimigos, mas cuidado se um desses cair me você vai doer! (-1 de vida)."
+            
+            //Passando o meu nivel
+            meu_nivel = global.nivel_livros;
+            
+            //Caso o jogador clique na melhoria e o nivel do poder for menor que o max e se ele tem
+            //dinheiro suficiente
+            if(cliquei == true and global.nivel_livros < 1 and global.dinheiro >= custo)
+            {
+                //Avisando que já cliquei
+                cliquei = false;
+                
+                //Então ele melhora a distancia
+                global.cair_livros = true;
+                
+                //Diminuindo o dinheiro
+                global.dinheiro -= custo;
+                
+                //Aumento o nivel em 1
+                global.nivel_livros += 1;
+            }
+            
+            //Caso eue atinja o nivel maximo
+            if(global.nivel_livros >= 1)
+            {
+                //Avisando que cheguei no nível maximo
+                atingi_nivel_max = true;
+            }  
+             
+        break;
+    
+        //Caso ele seja de aumentar disntancia
+        case "bombas":
+         
+            //Definindo a sprite pelo frame
+            image_index = 6;
+            
+            //Passando minha Função
+            if(global.nivel_bombas < 1) funcao = "Gera Dinamites no mapa que vão te ajudar a destruir tudo."
+            if(global.nivel_bombas >= 1) funcao = "Gera Bombas gigantes no mapa que vão te ajudar a destruir tudo."
+            
+            //Passando o meu nivel
+            meu_nivel = global.nivel_bombas;
+            
+            //Caso o jogador clique na melhoria e o nivel do poder for menor que o max e se ele tem
+            //dinheiro suficiente
+            if(cliquei == true and global.nivel_bombas < 2 and global.dinheiro >= custo)
+            {
+                //Avisando que já cliquei
+                cliquei = false;
+                
+                //Então ele melhora a distancia
+                if(global.nivel_bombas < 1) global.cria_dinamites = true;
+                if(global.nivel_bombas >= 1) global.cria_bombas = true;
+                
+                //Diminuindo o dinheiro
+                global.dinheiro -= custo;
+                
+                //Drobando o custo
+                custo *= 2;
+                
+                //Aumento o nivel em 1
+                global.nivel_bombas += 1;
+            }
+            
+            //Caso eue atinja o nivel maximo
+            if(global.nivel_bombas >= 2)
+            {
+                //Avisando que cheguei no nível maximo
+                atingi_nivel_max = true;
+            }  
+             
+        break;
     }
 }
 

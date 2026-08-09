@@ -4,6 +4,7 @@
 global.gerar_troncos = false;
 
 //Variável de criar bombas
+global.cria_dinamites = false;
 global.cria_bombas = false;
 
 //Variável de poder de cair livros
@@ -32,6 +33,18 @@ global.nivel_crescimento = 0;
 
 //Variável de nivel de criar troncos
 global.nivel_troncos = 0;
+
+//Variável de nivel de criar arvores
+global.nivel_cria_arvores = 0;
+
+//Variável de nivel de aumentar vida
+global.nivel_vida = 0;
+
+//Variável de nivel de livros
+global.nivel_livros = 0;
+
+//Variável de nivel de bombas
+global.nivel_bombas = 0;
 
 //Variavel de controle de atualização da grid
 global.precisa_atualizar_grid = false;

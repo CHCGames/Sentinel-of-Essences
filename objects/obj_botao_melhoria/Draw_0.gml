@@ -46,7 +46,7 @@ draw_set_colour(c_black);
 //Escrevo em baixo
 draw_text_ext_transformed(x, y + 19, "Nível: " + string(meu_nivel), 20, 200, 0.1, 0.1, image_angle);
 draw_text_ext_transformed(x - 1, y - 23, "Custa: " + string(custo), 20, 500, 0.09, 0.09, image_angle);
-if(escreve_funcao) draw_text_ext_transformed(120, 126, funcao, 20, 2500, 0.1, 0.1, image_angle);
+if(escreve_funcao) draw_text_ext_transformed(120, 126, funcao, 60, 1500, 0.1, 0.1, image_angle);
 
 
 //Resetando a cor
@@ -55,7 +55,7 @@ draw_set_colour(c_white);
 //Escrevo em baixo
 draw_text_ext_transformed(x, y + 18, "Nível: " + string(meu_nivel), 20, 200, 0.1, 0.1, image_angle);
 draw_text_ext_transformed(x - 1, y - 24, "Custa: " + string(custo), 20, 500, 0.09, 0.09, image_angle);
-if(escreve_funcao) draw_text_ext_transformed(120, 125, funcao, 20, 2500, 0.1, 0.1, image_angle);
+if(escreve_funcao) draw_text_ext_transformed(120, 125, funcao, 60, 1500, 0.1, 0.1, image_angle);
    
 //Resetando tudo
 draw_set_font(-1);
