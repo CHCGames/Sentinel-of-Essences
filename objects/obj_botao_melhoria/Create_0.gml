@@ -21,8 +21,9 @@ custo = meu_custo;
 //Variáel de nivel do poder
 poder_nivel = 0;
 
-//Variável de limite de upgrade
-nivel_max = 3;
+//Variável para salvar o nivel
+meu_nivel = poder_nivel;
+
 
 #endregion
 
@@ -37,9 +38,12 @@ maquina_estado = function()
     	//Caso ele seja de aumentar disntancia
         case "aumento_distancia":
          
+            //Passando o meu nivel
+            meu_nivel = poder_nivel;
+            
             //Caso o jogador clique na melhoria e o nivel do poder for menor que o max e se ele tem
             //dinheiro suficiente
-            if(mouse_check_button_pressed(mb_left) and poder_nivel < 3 and global.dinheiro >= custo)
+            if(mouse_check_button_pressed(mb_left) and poder_nivel < 4 and global.dinheiro >= custo)
             {
                 //Então ele melhora a distancia
                 global.distancia_atq += 16;
