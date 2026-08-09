@@ -1,3 +1,5 @@
+audio_play_sound(snd_botoes, 1, false);
+
 //Caso ele tenha pausado jogo
 if(global.game_pause)
 {

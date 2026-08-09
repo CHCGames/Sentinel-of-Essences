@@ -17,7 +17,7 @@ next_y = y;
 move = false;
 
 //Variável de tempo de andar
-tempo_andar = FPS * irandom_range(1, 3);
+tempo_andar = FPS * irandom_range(1, 2.5);
 
 //Variável de delei de andar
 delei_andar = tempo_andar;

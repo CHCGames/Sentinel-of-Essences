@@ -3,6 +3,9 @@
 //Variável de estado
 estado = "pequena";
 
+controle_audio_1 = true;
+controle_audio_2 = true;
+
 //Variavel de variação de tempo
 varia_tempo = FPS * irandom_range(1, 2);
 
@@ -65,6 +68,8 @@ maquina_estados = function()
     	//Caso ela esteja no estado media
         case "media":
             
+            if(controle_audio_1 and global.level_atual < 10) audio_play_sound(snd_crescer, 1, false); controle_audio_1 = false;
+            
             //Ela troca de sprite
             troca_sprite(spr_arvore_media);
              
@@ -86,6 +91,8 @@ maquina_estados = function()
         //Caso ela esteja no estado grande
         case "grande":
              
+            if(controle_audio_2 and global.level_atual < 10) audio_play_sound(snd_crescer, 1, false); controle_audio_2 = false;
+            
             //Caso ele tomar dano
             if(instance_place(x, y, obj_dano)) estado = choose("caindo_direita", "caindo_esquerda",
                 "caindo_baixo", "caindo_cima");

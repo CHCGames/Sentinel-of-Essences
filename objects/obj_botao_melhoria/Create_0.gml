@@ -52,7 +52,7 @@ maquina_estado = function()
             
             //Caso o jogador clique na melhoria e o nivel do poder for menor que o max e se ele tem
             //dinheiro suficiente
-            if(cliquei == true and global.nivel_poder < 3 and global.dinheiro >= custo)
+            if(cliquei == true and global.nivel_poder < 2 and global.dinheiro >= custo)
             {
                 //Avisando que já cliquei
                 cliquei = false;
@@ -71,7 +71,7 @@ maquina_estado = function()
             }
             
             //Caso eue atinja o nivel maximo
-            if(global.nivel_poder >= 3)
+            if(global.nivel_poder >= 2)
             {
                 //Avisando que cheguei no nível maximo
                 atingi_nivel_max = true;

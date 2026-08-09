@@ -1,3 +1,5 @@
+audio_play_sound(snd_compra, 1, false);
+
 //Avisando que eu cliquei
 cliquei = true;
 

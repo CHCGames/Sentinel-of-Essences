@@ -1,0 +1,1 @@
+if(global.level_atual < 10) audio_play_sound(snd_colisao, 0, false);

@@ -72,6 +72,8 @@ toma_dano = function()
     //Caso ele colidir com inimigo
     if(place_meeting(x, y, array_inimigos) and ivuneravel == false)
     {
+        audio_play_sound(snd_dano, 1, false);
+        
         //Diminuindo a vida
         global.vida_player -= 1;
         
@@ -79,7 +81,7 @@ toma_dano = function()
         ivuneravel = true;
         
         //Tremendo a tela
-        global.shake = 5;
+        global.shake = 10;
         
         //Definindo o array
         array_atual = array_vazio;
