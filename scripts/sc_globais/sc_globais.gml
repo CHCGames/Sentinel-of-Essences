@@ -1,7 +1,28 @@
 #region Varíaveis globais
 
 //Variável de desbloqueio de poder arvores agora geram troncos
-global.gerar_troncos = true;
+global.gerar_troncos = false;
+
+//Variável de criar bombas
+global.cria_bombas = false;
+
+//Variável de poder de cair livros
+global.cair_livros = false;
+
+//Variável de poder de criar arvores
+global.cria_arvores = false;
+
+//Variável de velocidade de crescimento das arvores
+global.velocidade_crescimento = 3;
+
+//Variável de vida do player
+global.vida_player = 3;
+
+//Variável de melhoria de distancia do ataque
+global.distancia_atq = 0;
+
+//Variável de dinheiro
+global.dinheiro = 100;
 
 //Variavel de controle de atualização da grid
 global.precisa_atualizar_grid = false;

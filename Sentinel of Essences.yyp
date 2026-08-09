@@ -160,6 +160,8 @@
     {"id":{"name":"spr_fonte_enchendo","path":"sprites/spr_fonte_enchendo/spr_fonte_enchendo.yy",},},
     {"id":{"name":"spr_fonte_esvaziando","path":"sprites/spr_fonte_esvaziando/spr_fonte_esvaziando.yy",},},
     {"id":{"name":"spr_fundo","path":"sprites/spr_fundo/spr_fundo.yy",},},
+    {"id":{"name":"spr_icones_loja_mascara","path":"sprites/spr_icones_loja_mascara/spr_icones_loja_mascara.yy",},},
+    {"id":{"name":"spr_icones_loja_outline","path":"sprites/spr_icones_loja_outline/spr_icones_loja_outline.yy",},},
     {"id":{"name":"spr_icones_loja","path":"sprites/spr_icones_loja/spr_icones_loja.yy",},},
     {"id":{"name":"spr_icones_purks","path":"sprites/spr_icones_purks/spr_icones_purks.yy",},},
     {"id":{"name":"spr_lava_chao_sumindo","path":"sprites/spr_lava_chao_sumindo/spr_lava_chao_sumindo.yy",},},

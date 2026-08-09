@@ -11,7 +11,8 @@ sprite_2 = spr_atq_essencia_noar_lados;
 estado = "surgindo";
 
 //Variavel de distancia
-distancia = 42;
+distancia_y = 32 + global.distancia_atq;
+distancia_x = 26 + global.distancia_atq;
 
 //array de colisões
 colisoes = [obj_arvore, obj_tronco_lados, obj_tronco_vertical, obj_pedra, obj_mago_tapete, 
@@ -63,17 +64,17 @@ maquina_estados = function()
             vspeed = vel_v;
             
             //Caso ele chegue no limete de distancia horizontal
-            if(x >= xstart + distancia or x <= xstart - distancia)
+            if(x >= xstart + distancia_x or x <= xstart - distancia_x)
             {
                 //Ele se destroi
-                instance_destroy(id, false);
+                instance_destroy(id, true);
             }
             
             //Caso ele chegue no limite de destancia vertical
-            if(y >= ystart + distancia or y <= ystart - distancia)
+            if(y >= ystart + distancia_y or y <= ystart - distancia_y)
             {
                 //Ele se destroi
-                instance_destroy(id, false);
+                instance_destroy(id, true);
             }    
             
             //Limitando a saida da tela //Ele se destroi

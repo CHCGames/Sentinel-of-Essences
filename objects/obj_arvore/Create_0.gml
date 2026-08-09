@@ -7,7 +7,7 @@ estado = "pequena";
 varia_tempo = FPS * irandom_range(1, 2);
 
 //Variavel de tempo de Crescimento
-tempo_crescer = FPS * 3 + varia_tempo;
+tempo_crescer = FPS * global.velocidade_crescimento + varia_tempo;
 
 //variável de Cresimento
 crescimento = tempo_crescer;

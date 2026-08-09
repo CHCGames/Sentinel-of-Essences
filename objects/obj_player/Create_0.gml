@@ -1,7 +1,7 @@
 #region Variáveis
 
 //Variável de vida
-vida = 3;
+vida = global.vida_player;
 
 //Varíavel de movimento 
 vel = 16;
