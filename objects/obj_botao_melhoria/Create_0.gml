@@ -12,6 +12,9 @@ outline = false;
 //Variável de controle de nivel max
 atingi_nivel_max = false;
 
+//Variavel de controle para dizer minha função
+escreve_funcao = false;
+
 //Variável de estado
 estado = melhoria;
 
@@ -23,6 +26,9 @@ poder_nivel = 0;
 
 //Variável para salvar o nivel
 meu_nivel = poder_nivel;
+
+//Variável de minha função
+funcao = "opa";
 
 
 #endregion
@@ -38,6 +44,9 @@ maquina_estado = function()
     	//Caso ele seja de aumentar disntancia
         case "aumento_distancia":
          
+            //Passando minha Função
+            funcao = "Aumenta a distancia do ataque em mais um bloco."
+            
             //Passando o meu nivel
             meu_nivel = poder_nivel;
             

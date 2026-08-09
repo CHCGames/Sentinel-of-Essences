@@ -23,7 +23,7 @@
   ],
   "name":"spr_moldura_essencia",
   "nineSlice":null,
-  "origin":4,
+  "origin":9,
   "parent":{
     "name":"Hud",
     "path":"folders/Sprites/Hud/Hud.yy",
@@ -75,7 +75,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":24,
+    "xorigin":31,
     "yorigin":8,
   },
   "swatchColours":null,

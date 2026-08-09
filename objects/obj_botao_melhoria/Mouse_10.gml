@@ -1,4 +1,4 @@
-if(atingi_nivel_max == false)
+if(atingi_nivel_max == false and global.dinheiro >= custo)
 {
     //Usando o efeito squash
     efeito_squash(2.1, 2.1);
@@ -7,3 +7,5 @@ if(atingi_nivel_max == false)
     outline = true;
 }
 
+//Avisando para escrever minha função
+escreve_funcao = true;
