@@ -17,7 +17,7 @@ next_y = y;
 move = false;
 
 //Variável de tempo de andar
-tempo_andar = FPS * irandom_range(1, 2);
+tempo_andar = FPS * irandom_range(1, 3);
 
 //Variável de delei de andar
 delei_andar = tempo_andar;
@@ -62,12 +62,7 @@ colisao = function()
 //Criando o método de movimento
 movimento = function()
 { 
-    //Dando uma distancia para perseguir
-    var _distancia = point_distance(x, y, obj_player.x, obj_player.y)
-    
-    //Caso a distancia dele do player seja menor que 50
-    if(_distancia < 250)
-    {
+
           //Estou usando um path para ele seguir o player
           if(mp_grid_path(global.grid, meu_path, x, y, obj_player.x, obj_player.y, false))
           {
@@ -134,7 +129,7 @@ movimento = function()
                     }
               }
           } 
-    }
+    
 }
 
 

@@ -18,6 +18,7 @@ global.velocidade_crescimento = 3;
 
 //Variável de vida do player
 global.vida_player = 3;
+global.moldura_vida = 3;
 
 //Variável de melhoria de distancia do ataque
 global.distancia_atq = 0;
@@ -45,6 +46,15 @@ global.nivel_livros = 0;
 
 //Variável de nivel de bombas
 global.nivel_bombas = 0;
+
+//Variável de vitória
+global.ganhei = false;
+
+//Variável de leveis
+global.level_atual = 0;
+
+//Variavel de pause
+global.game_pause = false;
 
 //Variavel de controle de atualização da grid
 global.precisa_atualizar_grid = false;

@@ -52,10 +52,10 @@ array_atual = colisoes;
 toma_dano = function()
 {
     //Caso a vida dele acabe
-    if(vida <= 0)
+    if(global.vida_player <= 0)
     {
-        //ele perde
-        room_restart();
+        //Pausa o jogo
+        global.game_pause = true;
     }  
     
     //Caso ele apertar R
@@ -63,6 +63,9 @@ toma_dano = function()
     {
     	//Ele reinicia a room
         room_restart();
+        
+        //Restaura a vida
+        global.vida_player = global.moldura_vida;
     }
  
     
@@ -70,13 +73,13 @@ toma_dano = function()
     if(place_meeting(x, y, array_inimigos) and ivuneravel == false)
     {
         //Diminuindo a vida
-        vida -= 1;
+        global.vida_player -= 1;
         
         //Avisando que estou ivunerável
         ivuneravel = true;
         
         //Tremendo a tela
-        global.shake = 2;
+        global.shake = 5;
         
         //Definindo o array
         array_atual = array_vazio;

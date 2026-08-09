@@ -217,6 +217,7 @@ maquina_estado = function()
                 
                 //Então ele melhora a distancia
                 global.vida_player += 1;
+                global.moldura_vida += 1;
                 
                 //Diminuindo o dinheiro
                 global.dinheiro -= custo;

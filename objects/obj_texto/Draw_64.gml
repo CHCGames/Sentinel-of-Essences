@@ -1,3 +1,6 @@
+//Caso ele não possa desenhar ele sai
+if(escrever == false) exit;
+
 //Setando a minha fonte
 draw_set_font(ft_texto);
 

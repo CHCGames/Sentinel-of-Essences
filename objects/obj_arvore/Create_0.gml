@@ -95,6 +95,9 @@ maquina_estados = function()
             //Caso o poder colidir na esquerda da arvore
             if(place_meeting(x - 4, y, colisoes))
             {
+                //Cria o dano
+                instance_create_layer(x + 16, y, "Troncos", obj_dano);
+                
                 //Então ela vai para o estado de cair para direita
                 estado = "caindo_direita";
             }    
@@ -102,6 +105,9 @@ maquina_estados = function()
             //Caso o poder colidir na direita
             if(place_meeting(x + 4, y, colisoes))
             {
+                //Cria o dano
+                instance_create_layer(x - 16, y, "Troncos", obj_dano);
+                
                 //Ela vai para o estado de cair para esquerda
                 estado = "caindo_esquerda";
             } 
@@ -109,6 +115,9 @@ maquina_estados = function()
             //Caso o poder colidir em baixo
             if(place_meeting(x, y + 2 , colisoes))
             {
+                //Cria o dano
+                instance_create_layer(x, y - 16, "Troncos", obj_dano);
+                
                 //Ela vai para o estado de cair para cima
                 estado = "caindo_cima";
             }    
@@ -116,6 +125,9 @@ maquina_estados = function()
             //Caso o poder colidir em cima
             if(place_meeting(x, y - 2, colisoes))
             {
+                //Cria o dano
+                instance_create_layer(x, y + 16, "Troncos", obj_dano);
+                
                 //Ela vai para o estado de cair para baixo
                 estado = "caindo_baixo";
             } 
@@ -131,8 +143,6 @@ maquina_estados = function()
             //Quando acabou a animação
             if (acabou_animacao()) 
             {
-                //Cria o dano
-                instance_create_layer(x + 16, y, "Troncos", obj_dano);
                 
             	//Cria efeitos de explosão
                 instance_create_layer(x, y - 5, "Efeitos", obj_efeito_explosao);
@@ -156,9 +166,6 @@ maquina_estados = function()
             //Quando acabou a animação
             if (acabou_animacao()) 
             {
-                //Cria o dano
-                instance_create_layer(x - 16, y, "Troncos", obj_dano);
-                
             	//Cria efeitos de explosão
                 instance_create_layer(x, y - 5, "Efeitos", obj_efeito_explosao);
                 instance_create_layer(x - 16, y - 5, "Efeitos", obj_efeito_explosao);
@@ -180,9 +187,6 @@ maquina_estados = function()
             //Quando acabou a animação
             if (acabou_animacao()) 
             {
-                //Cria o dano
-                instance_create_layer(x, y - 16, "Troncos", obj_dano);
-                
             	//Cria efeitos de explosão
                 instance_create_layer(x, y - 5, "Efeitos", obj_efeito_explosao);
                 instance_create_layer(x, y - 16, "Efeitos", obj_efeito_explosao);
@@ -204,9 +208,6 @@ maquina_estados = function()
             //Quando acabou a animação
             if (acabou_animacao()) 
             {
-                //Cria o dano
-                instance_create_layer(x, y + 16, "Troncos", obj_dano);
-                
             	//Cria efeitos de explosão
                 instance_create_layer(x, y - 5, "Efeitos", obj_efeito_explosao);
                 instance_create_layer(x, y + 16, "Efeitos", obj_efeito_explosao);

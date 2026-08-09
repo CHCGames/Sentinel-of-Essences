@@ -1,3 +1,6 @@
+//Pausando
+if(global.game_pause == true) exit;
+
 //Aplicando o movimento
 movimento();
 

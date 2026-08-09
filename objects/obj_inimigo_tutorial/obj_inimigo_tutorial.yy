@@ -11,8 +11,8 @@
   "name":"obj_inimigo_tutorial",
   "overriddenProperties":[],
   "parent":{
-    "name":"Inimigos",
-    "path":"folders/Objects/Inimigos.yy",
+    "name":"Hud",
+    "path":"folders/Objects/Hud.yy",
   },
   "parentObjectId":null,
   "persistent":false,

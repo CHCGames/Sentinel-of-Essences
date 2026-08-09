@@ -33,26 +33,29 @@ colisoes = [obj_dano, obj_tronco_lados, obj_tronco_vertical, obj_pedra, obj_caix
 //Fazendo Método de colisão
 colisao = function()
 {
+    //Pausando
+    if(global.game_pause == true) exit;
+    
     //Se ele colidir com qualquer item do array
-    if(instance_place(x, y + 1, colisoes))
+    if(instance_place(x, y , colisoes))
     {
         //Ele se destroi
         instance_destroy(id, true);
     }
     //Se ele colidir com qualquer item do array
-    if(instance_place(x, y - 1, colisoes))
+    if(instance_place(x, y, colisoes))
     {
         //Ele se destroi
         instance_destroy(id, true);
     }
     //Se ele colidir com qualquer item do array
-    if(instance_place(x - 1, y, colisoes))
+    if(instance_place(x, y, colisoes))
     {
         //Ele se destroi
         instance_destroy(id, true);
     }
     //Se ele colidir com qualquer item do array
-    if(instance_place(x + 1, y, colisoes))
+    if(instance_place(x, y, colisoes))
     {
         //Ele se destroi
         instance_destroy(id, true);
@@ -62,11 +65,14 @@ colisao = function()
 //Criando o método de movimento
 movimento = function()
 { 
+    //Pausando
+    if(global.game_pause == true) exit;
+    
     //Dando uma distancia para perseguir
     var _distancia = point_distance(x, y, obj_player.x, obj_player.y)
     
     //Caso a distancia dele do player seja menor que 50
-    if(_distancia < 250)
+    if(_distancia < 350)
     {
           //Estou usando um path para ele seguir o player
           if(mp_grid_path(global.grid, meu_path, x, y, obj_player.x, obj_player.y, false))

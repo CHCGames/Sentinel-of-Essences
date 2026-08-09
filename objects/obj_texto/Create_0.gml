@@ -1,4 +1,8 @@
-//Definindo o tamanho da minha gui
+//Variável de controle de esscrever
+escrever = false;
+
+//Dando tempo do alarme
+alarm[0] = FPS/3;
 
 //Pegando a largura da minha view
 var _larg_view = camera_get_view_width(view_camera[0]);

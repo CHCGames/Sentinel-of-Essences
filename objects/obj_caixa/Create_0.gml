@@ -72,7 +72,7 @@ maquina_estados = function()
             if (instance_place(x + 2, y, colisoes)) 
             {
                 //Ele se destroi
-                alarm[0] = 1;
+                alarm[0] = 2;
             }
             
         break;
@@ -87,7 +87,7 @@ maquina_estados = function()
             if (instance_place(x - 2, y, colisoes)) 
             {
                 //Ele se destroi
-                alarm[0] = 1;
+                alarm[0] = 2;
             }
             
             
@@ -103,7 +103,7 @@ maquina_estados = function()
             if (instance_place(x, y - 2, colisoes)) 
             {
                 //Ele se destroi
-                alarm[0] = 1;  
+                alarm[0] = 2;  
             }
             
         break;
@@ -118,7 +118,7 @@ maquina_estados = function()
             if (instance_place(x, y + 2, colisoes)) 
             {
                 //Ele se destroi
-                alarm[0] = 1;
+                alarm[0] = 2;
             }
             
         break;
