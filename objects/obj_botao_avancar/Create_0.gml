@@ -10,7 +10,7 @@ outline = false;
 estado = estado_bt;
 
 //Variável de destino]
-destino = [rm_level_1, rm_loja_gameplay];
+destino = [rm_level_1, rm_loja_gameplay, rm_level_2, rm_loja_gameplay, rm_level_3, rm_loja_gameplay];
 
 //Variável de sprite_outline
 sprite_outline = spr_botao_voltar_outline;

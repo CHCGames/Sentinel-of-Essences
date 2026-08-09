@@ -65,6 +65,8 @@ colisao = function()
 //Criando o método de movimento
 movimento = function()
 { 
+    if(global.level_atual >= 4) tempo_andar = irandom_range(FPS - 10, FPS) ;
+    
     //Pausando
     if(global.game_pause == true) exit;
     

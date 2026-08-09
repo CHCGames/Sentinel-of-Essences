@@ -1,12 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_dinheiro",
+  "%Name":"obj_totem",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_dinheiro",
+  "name":"obj_totem",
   "overriddenProperties":[],
   "parent":{
     "name":"Floresta",
@@ -31,9 +32,12 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_essencia_dinheiro",
-    "path":"sprites/spr_essencia_dinheiro/spr_essencia_dinheiro.yy",
+    "name":"spr_totem",
+    "path":"sprites/spr_totem/spr_totem.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_arvore_grande",
+    "path":"sprites/spr_arvore_grande/spr_arvore_grande.yy",
+  },
   "visible":true,
 }

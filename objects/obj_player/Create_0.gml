@@ -32,7 +32,7 @@ delei_andar = 0;
 
 //array de colisão
 colisoes = [obj_parede, obj_arvore, obj_tronco_lados, obj_tronco_vertical, obj_buraco, obj_pedra, 
-obj_mago_tapete, obj_caixa, obj_inimigo_tutorial];
+obj_mago_tapete, obj_caixa, obj_inimigo_tutorial, obj_totem, obj_lava, obj_cuba];
 
 //Array inimigos
 array_inimigos = [obj_mago_tapete];

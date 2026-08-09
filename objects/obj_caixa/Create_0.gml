@@ -13,7 +13,7 @@ destruir = false;
 image_speed = 0;
 
 //Criando array de colisões
-colisoes = [obj_tronco_lados, obj_tronco_vertical, obj_arvore, obj_pedra, obj_mago_tapete, obj_caixa];
+colisoes = [obj_tronco_lados, obj_tronco_vertical, obj_arvore, obj_pedra, obj_mago_tapete, obj_caixa, obj_lava];
 
 //array de colisões que afetam
 colisoes_afetam = [obj_poder_essecia];

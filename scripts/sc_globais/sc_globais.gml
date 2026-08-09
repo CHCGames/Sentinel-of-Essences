@@ -51,7 +51,7 @@ global.nivel_bombas = 0;
 global.ganhei = false;
 
 //Variável de leveis
-global.level_atual = 0;
+global.level_atual = 4;
 
 //Variavel de pause
 global.game_pause = false;
@@ -77,6 +77,9 @@ function atualizar_grid()
     mp_grid_add_instances(global.grid, obj_pedra, false);
     mp_grid_add_instances(global.grid, obj_parede, false);
     mp_grid_add_instances(global.grid, obj_caixa, false);
+    mp_grid_add_instances(global.grid, obj_totem, false);
+    mp_grid_add_instances(global.grid, obj_lava, false);
+    mp_grid_add_instances(global.grid, obj_cuba, false);
 }
 
 //Função para checar se acabou animação
