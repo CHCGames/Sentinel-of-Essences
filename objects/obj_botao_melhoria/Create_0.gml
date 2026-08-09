@@ -15,17 +15,17 @@ atingi_nivel_max = false;
 //Variavel de controle para dizer minha função
 escreve_funcao = false;
 
+//Variável de controle de clicar
+cliquei = false;
+
 //Variável de estado
 estado = melhoria;
 
 //Variável de custo
 custo = meu_custo;
 
-//Variáel de nivel do poder
-poder_nivel = 0;
-
 //Variável para salvar o nivel
-meu_nivel = poder_nivel;
+meu_nivel = 0;
 
 //Variável de minha função
 funcao = "opa";
@@ -48,24 +48,30 @@ maquina_estado = function()
             funcao = "Aumenta a distancia do ataque em mais um bloco."
             
             //Passando o meu nivel
-            meu_nivel = poder_nivel;
+            meu_nivel = global.nivel_poder;
             
             //Caso o jogador clique na melhoria e o nivel do poder for menor que o max e se ele tem
             //dinheiro suficiente
-            if(mouse_check_button_pressed(mb_left) and poder_nivel < 4 and global.dinheiro >= custo)
+            if(cliquei == true and global.nivel_poder < 3 and global.dinheiro >= custo)
             {
+                //Avisando que já cliquei
+                cliquei = false;
+                
                 //Então ele melhora a distancia
                 global.distancia_atq += 16;
                 
                 //Diminuindo o dinheiro
                 global.dinheiro -= custo;
                 
+                //Aumentando o custo
+                custo *= 2;
+                
                 //Aumento o nivel em 1
-                poder_nivel += 1;
+                global.nivel_poder += 1;
             }
             
             //Caso eue atinja o nivel maximo
-            if(poder_nivel >= 3)
+            if(global.nivel_poder >= 3)
             {
                 //Avisando que cheguei no nível maximo
                 atingi_nivel_max = true;
