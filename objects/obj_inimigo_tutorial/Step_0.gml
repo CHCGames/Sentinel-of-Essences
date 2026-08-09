@@ -1,0 +1,2 @@
+//Aplicando a colisão
+colisao();

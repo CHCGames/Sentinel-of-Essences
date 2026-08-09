@@ -16,7 +16,7 @@ distancia_x = 26 + global.distancia_atq;
 
 //array de colisões
 colisoes = [obj_arvore, obj_tronco_lados, obj_tronco_vertical, obj_pedra, obj_mago_tapete, 
-obj_caixa, obj_parede];
+obj_caixa, obj_parede, obj_inimigo_tutorial];
 
 #endregion
 
@@ -25,8 +25,9 @@ obj_caixa, obj_parede];
 //Método de colisão
 colisao = function()
 {
+    
     //Caso ele colir com os objetos do array
-    if(place_meeting(x, y, colisoes))
+    if(instance_place(x, y, colisoes))
     {
         //Criando efeito de explosão
         instance_create_layer(x, y, "Efeitos", obj_efeito_explosao);

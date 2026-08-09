@@ -23,7 +23,7 @@ global.vida_player = 3;
 global.distancia_atq = 0;
 
 //Variável de dinheiro
-global.dinheiro = 100;
+global.dinheiro = 0;
 
 //Variável de nível da distancia do poder
 global.nivel_poder = 0;

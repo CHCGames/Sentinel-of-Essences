@@ -23,7 +23,7 @@ colisoes = [obj_poder_essecia, obj_tronco_lados, obj_tronco_vertical, obj_pedra,
 gera_troncos = function(_px = 0, _py = 0)
 {
     //Caso ele tenha o purk
-    if (global.gerar_troncos) 
+    if (global.gerar_troncos == true) 
     {
     	//Varíavel de troncos aleatórios
         var _tronco = choose(obj_tronco_lados, obj_tronco_vertical);

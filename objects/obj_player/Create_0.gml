@@ -32,7 +32,7 @@ delei_andar = 0;
 
 //array de colisão
 colisoes = [obj_parede, obj_arvore, obj_tronco_lados, obj_tronco_vertical, obj_buraco, obj_pedra, 
-obj_mago_tapete, obj_caixa];
+obj_mago_tapete, obj_caixa, obj_inimigo_tutorial];
 
 //Array inimigos
 array_inimigos = [obj_mago_tapete];
@@ -56,7 +56,15 @@ toma_dano = function()
     {
         //ele perde
         room_restart();
-    }    
+    }  
+    
+    //Caso ele apertar R
+    if (keyboard_check_pressed(ord("R"))) 
+    {
+    	//Ele reinicia a room
+        room_restart();
+    }
+ 
     
     //Caso ele colidir com inimigo
     if(place_meeting(x, y, array_inimigos) and ivuneravel == false)
